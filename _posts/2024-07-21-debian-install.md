@@ -1,7 +1,8 @@
 ---
 layout: mypost
 title: Debian 12 安装记录
-categories: [Linux]
+categories:
+  - Linux
 ---
 
 记录下 Debian 12 安装过程
