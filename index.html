@@ -1,0 +1,1642 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .flex-row {
+        display: flex;
+        flex-direction: row;
+      }
+      .flex-col {
+        display: flex;
+        flex-direction: column;
+      }
+      .justify-start {
+        display: flex;
+        justify-content: flex-start;
+      }
+      .justify-center {
+        display: flex;
+        justify-content: center;
+      }
+      .justify-end {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .justify-between {
+        display: flex;
+        justify-content: space-between;
+      }
+      .items-start {
+        display: flex;
+        align-items: flex-start;
+      }
+      .items-end {
+        display: flex;
+        align-items: flex-end;
+      }
+      .items-center {
+        display: flex;
+        align-items: center;
+      }
+      .no-shrink {
+        flex-shrink: 0;
+      }
+
+      .music_0_4 {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        isolation: isolate;
+        min-height: 100%;
+      }
+
+      .music_0_158 {
+        position: relative;
+        width: auto;
+        height: 722px;
+        overflow: hidden;
+        background-color: #f9f8ff;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        isolation: isolate;
+        z-index: 4;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        align-self: stretch;
+      }
+
+      .music_0_208 {
+        width: 1200px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 1;
+        margin-top: 40px;
+      }
+
+      .music_0_209 {
+        flex-shrink: 0;
+        font-size: 24px;
+        font-family: Inter;
+        font-weight: 600;
+        line-height: 32px;
+        letter-spacing: 0px;
+        color: #121212;
+        white-space: pre;
+      }
+
+      .music_0_210 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .music_0_211 {
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #121212;
+        white-space: pre;
+      }
+
+      .music_0_212 {
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #121212;
+        white-space: pre;
+      }
+
+      .music_0_213 {
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #121212;
+        white-space: pre;
+      }
+
+      .music_0_214 {
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #121212;
+        white-space: pre;
+      }
+
+      .flexContainer_6_music_0_158 {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 527px;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 0;
+        margin-top: 55px;
+        margin-left: 0;
+      }
+
+      .music_20_593 {
+        position: relative;
+        width: 565px;
+        height: 527px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 0;
+        margin-left: 755px;
+      }
+
+      .music_20_598 {
+        position: absolute;
+        width: auto;
+        height: auto;
+        top: -7px;
+        left: -5px;
+        right: -6px;
+        bottom: -42px;
+        background: url(https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/45533173523/8b09/434c/97d3/be727b6c32ed936209cea45169cb1036.png) center / cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .music_20_552 {
+        position: relative;
+        width: 172px;
+        height: 136px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 17px;
+        margin-left: auto;
+        margin-right: 32px;
+      }
+
+      .music_0_198 {
+        position: absolute;
+        width: auto;
+        height: 238px;
+        top: auto;
+        left: -51px;
+        right: -51px;
+        bottom: -75px;
+        background: url(https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/45533134922/e8c9/a913/423a/1b84333ed578da58d2307236baa844be.png) center / cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .music_0_199 {
+        position: relative;
+        font-size: 13px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0px;
+        color: #121212;
+        width: auto;
+        margin-top: 51px;
+        margin-left: 67px;
+        margin-right: 73px;
+        align-self: stretch;
+      }
+
+      .music_20_603 {
+        position: absolute;
+        width: 729px;
+        height: 399px;
+        top: 0;
+        left: 120px;
+        bottom: 38px;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        isolation: isolate;
+      }
+
+      .music_20_0049 {
+        width: 586px;
+        height: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+        z-index: 1;
+        margin-top: 0;
+        margin-left: 0;
+      }
+
+      .music_20_0054 {
+        flex-shrink: 0;
+        font-size: 54px;
+        font-family: Inter;
+        font-weight: 700;
+        line-height: 70px;
+        letter-spacing: 1px;
+        color: #121212;
+        width: 100%;
+      }
+
+      .music_20_0058 {
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #929292;
+      }
+
+      .music_20_0062 {
+        width: 135px;
+        height: 52px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-top: 16px;
+        padding-right: 40px;
+        padding-bottom: 16px;
+        padding-left: 40px;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        background-color: #7868e6;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #ffffff;
+        white-space: pre;
+      }
+
+      .music_20_0007 {
+        width: 224px;
+        height: 215px;
+        position: absolute;
+        top: auto;
+        left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 28px;
+        padding-right: 28px;
+        padding-bottom: 28px;
+        padding-left: 28px;
+        gap: 22px;
+        border-radius: 8px;
+        background-color: #ffffff;
+        box-shadow: 0px 24px 34px 0px rgba(199, 201, 217, 0.25);
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+      }
+
+      .music_20_0014 {
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0px;
+        color: #000000;
+        white-space: pre;
+      }
+
+      .music_20_0019 {
+        width: 168px;
+        height: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 5px;
+        flex-shrink: 0;
+        font-size: 12px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0px;
+        color: #121212;
+        white-space: pre;
+        position: relative;
+      }
+
+      .music_20_0020 {
+        width: 118px;
+        height: 16px;
+        flex-shrink: 0;
+      }
+
+      .music_20_0024 {
+        width: 100%;
+        height: 3px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .music_20_0025 {
+        width: 144px;
+        height: 3px;
+        flex-shrink: 0;
+        border-radius: 200px;
+        background-color: #7868e6;
+      }
+
+      .music_20_0026 {
+        width: 100%;
+        height: 3px;
+        flex-shrink: 0;
+        margin-top: -3px;
+        border-radius: 200px;
+        background-color: rgba(84, 72, 161, 0.1);
+      }
+
+      .music_20_0027 {
+        width: 168px;
+        height: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 6px;
+        flex-shrink: 0;
+        font-size: 12px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0px;
+        color: #121212;
+        white-space: pre;
+        position: relative;
+      }
+
+      .music_20_0028 {
+        width: 118px;
+        height: 15px;
+        flex-shrink: 0;
+      }
+
+      .music_20_0032 {
+        width: 100%;
+        height: 3px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .music_20_0033 {
+        width: 115px;
+        height: 3px;
+        flex-shrink: 0;
+        border-radius: 200px;
+        background-color: #e67868;
+      }
+
+      .music_20_0034 {
+        width: 100%;
+        height: 3px;
+        flex-shrink: 0;
+        margin-top: -3px;
+        border-radius: 200px;
+        background-color: rgba(161, 84, 72, 0.1);
+      }
+
+      .music_20_0035 {
+        width: 168px;
+        height: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 6px;
+        flex-shrink: 0;
+        font-size: 12px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0px;
+        color: #121212;
+        white-space: pre;
+        position: relative;
+      }
+
+      .music_20_0036 {
+        width: 118px;
+        height: 15px;
+        flex-shrink: 0;
+      }
+
+      .music_20_0040 {
+        width: 100%;
+        height: 3px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .music_20_0041 {
+        width: 140px;
+        height: 3px;
+        flex-shrink: 0;
+        border-radius: 200px;
+        background-color: #68e678;
+      }
+
+      .music_20_0042 {
+        width: 100%;
+        height: 3px;
+        flex-shrink: 0;
+        margin-top: -3px;
+        border-radius: 200px;
+        background-color: rgba(72, 161, 84, 0.1);
+      }
+
+      .music_0_98 {
+        width: 1098px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 100px;
+        position: relative;
+        z-index: 3;
+        margin-top: 150px;
+        margin-left: 120px;
+      }
+
+      .music_20_919 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .music_20_924 {
+        flex-shrink: 0;
+        font-size: 32px;
+        font-family: Inter;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 1px;
+        color: #121212;
+        white-space: pre;
+      }
+
+      .music_20_929 {
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #929292;
+      }
+
+      .music_0_102 {
+        width: 696px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 30px;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .music_0_103 {
+        width: 100%;
+        height: 34px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .music_0_104 {
+        width: 115px;
+        height: 26px;
+        position: relative;
+        flex-shrink: 0;
+        margin-top: -0.5px;
+        margin-right: 0;
+        margin-bottom: -0.5px;
+        margin-left: 0;
+      }
+
+      .music_0_107 {
+        width: 114px;
+        height: 28px;
+        position: relative;
+        flex-shrink: 0;
+        margin-top: -0.5px;
+        margin-right: 0px;
+        margin-bottom: -0.5px;
+        margin-left: -1px;
+      }
+
+      .music_0_114 {
+        width: 115px;
+        height: 34px;
+        position: relative;
+        flex-shrink: 0;
+        margin-top: 0;
+        margin-right: -1px;
+        margin-bottom: 0;
+        margin-left: 0px;
+      }
+
+      .music_0_117 {
+        width: 124px;
+        height: 30px;
+        position: relative;
+        flex-shrink: 0;
+        margin-top: -0.5px;
+        margin-right: 0;
+        margin-bottom: -0.5px;
+        margin-left: 0;
+      }
+
+      .music_0_123 {
+        width: 100%;
+        height: 38px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .music_0_124 {
+        width: 116px;
+        height: 38px;
+        position: relative;
+        flex-shrink: 0;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+      }
+
+      .music_0_136 {
+        width: 118px;
+        height: 34px;
+        position: relative;
+        flex-shrink: 0;
+        margin-top: -0.5px;
+        margin-right: 0px;
+        margin-bottom: -0.5px;
+        margin-left: -1px;
+      }
+
+      .music_0_141 {
+        width: 117px;
+        height: 38px;
+        position: relative;
+        flex-shrink: 0;
+        margin-top: -0.5px;
+        margin-right: -1px;
+        margin-bottom: -0.5px;
+        margin-left: 0px;
+      }
+
+      .music_0_153 {
+        width: 123px;
+        height: 24px;
+        position: relative;
+        flex-shrink: 0;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+      }
+
+      .music_0_54 {
+        width: 1199px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 2;
+        margin-top: 150px;
+      }
+
+      .music_20_807 {
+        width: 392px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .music_20_812 {
+        flex-shrink: 0;
+        font-size: 32px;
+        font-family: Inter;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 1px;
+        color: #121212;
+        white-space: pre;
+      }
+
+      .music_20_817 {
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #929292;
+        white-space: pre;
+        width: 100%;
+      }
+
+      .music_0_58 {
+        height: 276px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 139px;
+        flex-shrink: 0;
+        position: relative;
+        width: 100%;
+      }
+
+      .music_20_842 {
+        width: 307px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2px;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .music_20_847 {
+        width: 100%;
+        height: 3px;
+        flex-shrink: 0;
+        background-color: #7868e6;
+      }
+
+      .music_20_848 {
+        position: relative;
+        width: 100%;
+        height: 271px;
+        flex-shrink: 0;
+        overflow: hidden;
+        background-color: #ffffff;
+        box-shadow: 0px 24px 34px 0px rgba(199, 201, 217, 0.25);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        isolation: isolate;
+      }
+
+      .music_20_857 {
+        width: 40px;
+        height: 40px;
+        z-index: 2;
+        position: relative;
+        margin-top: 50px;
+        margin-left: 40px;
+      }
+
+      .music_20_849 {
+        position: relative;
+        font-size: 24px;
+        font-family: Inter;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 1px;
+        color: #121212;
+        white-space: pre;
+        width: max-content;
+        margin-left: calc(50% - 113.5px);
+        margin-right: auto;
+        z-index: 0;
+        margin-top: 24px;
+      }
+
+      .music_20_853 {
+        position: relative;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0px;
+        color: #929292;
+        width: max-content;
+        margin-left: calc(50% - 113.5px);
+        margin-right: auto;
+        z-index: 1;
+        margin-top: 12px;
+      }
+
+      .music_20_866 {
+        width: 307px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2px;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .music_20_871 {
+        width: 100%;
+        height: 3px;
+        flex-shrink: 0;
+        background-color: #7868e6;
+      }
+
+      .music_20_872 {
+        position: relative;
+        width: 100%;
+        height: 271px;
+        flex-shrink: 0;
+        overflow: hidden;
+        background-color: #ffffff;
+        box-shadow: 0px 24px 34px 0px rgba(199, 201, 217, 0.25);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        isolation: isolate;
+      }
+
+      .music_20_881 {
+        width: 40px;
+        height: 40px;
+        z-index: 2;
+        position: relative;
+        margin-top: 50px;
+        margin-left: 40px;
+      }
+
+      .music_20_873 {
+        position: relative;
+        font-size: 24px;
+        font-family: Inter;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 1px;
+        color: #121212;
+        white-space: pre;
+        width: max-content;
+        margin-left: calc(50% - 113.5px);
+        margin-right: auto;
+        z-index: 0;
+        margin-top: 24px;
+      }
+
+      .music_20_877 {
+        position: relative;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0px;
+        color: #929292;
+        width: max-content;
+        margin-left: calc(50% - 113.5px);
+        margin-right: auto;
+        z-index: 1;
+        margin-top: 12px;
+      }
+
+      .music_20_446 {
+        position: relative;
+        width: 307px;
+        height: 276px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        isolation: isolate;
+      }
+
+      .music_0_87 {
+        width: auto;
+        height: 3px;
+        position: relative;
+        background-color: #7868e6;
+        z-index: 1;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        align-self: stretch;
+      }
+
+      .flexContainer_5_music_20_446 {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 271px;
+        flex-direction: column;
+        align-items: flex-start;
+        isolation: isolate;
+        z-index: 0;
+        margin-top: 2px;
+        margin-left: 0;
+      }
+
+      .music_0_88 {
+        width: 40px;
+        height: 40px;
+        z-index: 1;
+        position: relative;
+        margin-top: 50px;
+        margin-left: 40px;
+      }
+
+      .music_20_891 {
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-top: 47px;
+        padding-bottom: 47px;
+        gap: 12px;
+        overflow: hidden;
+        background-color: #ffffff;
+        box-shadow: 0px 24px 34px 0px rgba(199, 201, 217, 0.25);
+        right: -21px;
+        bottom: 0;
+        z-index: 0;
+      }
+
+      .music_20_898 {
+        flex-shrink: 0;
+        font-size: 24px;
+        font-family: Inter;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: 1px;
+        color: #121212;
+        white-space: pre;
+      }
+
+      .music_20_902 {
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0px;
+        color: #929292;
+      }
+
+      .music_20_721 {
+        width: 1200px;
+        height: 1086px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 1;
+        margin-top: 150px;
+      }
+
+      .music_20_726 {
+        width: 427px;
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .music_20_727 {
+        flex-shrink: 0;
+        font-size: 32px;
+        font-family: Inter;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 1px;
+        color: #121212;
+        white-space: pre;
+      }
+
+      .music_20_731 {
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #929292;
+        white-space: pre;
+        width: 100%;
+      }
+
+      .music_20_735 {
+        height: 525px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-shrink: 0;
+        align-self: stretch;
+        position: relative;
+        width: 100%;
+      }
+
+      .music_20_736 {
+        position: relative;
+        width: 585px;
+        height: 525px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .music_20_737 {
+        width: 100%;
+        height: 439px;
+        position: relative;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        align-self: stretch;
+      }
+
+      .music_20_738 {
+        position: absolute;
+        top: auto;
+        left: 0;
+        font-size: 28px;
+        font-family: Inter;
+        font-weight: 700;
+        line-height: 36px;
+        letter-spacing: 1px;
+        color: #121212;
+        white-space: pre;
+        bottom: 30px;
+      }
+
+      .music_20_742 {
+        position: absolute;
+        top: auto;
+        left: 0;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #929292;
+        white-space: pre;
+        bottom: 0;
+      }
+
+      .music_20_746 {
+        position: relative;
+        width: 585px;
+        height: 525px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        isolation: isolate;
+      }
+
+      .music_20_755 {
+        width: 100%;
+        height: 439px;
+        position: relative;
+        z-index: 2;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        align-self: stretch;
+      }
+
+      .music_20_747 {
+        position: absolute;
+        top: auto;
+        left: 0;
+        font-size: 28px;
+        font-family: Inter;
+        font-weight: 700;
+        line-height: 36px;
+        letter-spacing: 1px;
+        color: #121212;
+        white-space: pre;
+        bottom: 30px;
+        z-index: 0;
+      }
+
+      .music_20_751 {
+        position: absolute;
+        top: auto;
+        left: 0;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #929292;
+        white-space: pre;
+        bottom: 0;
+        z-index: 1;
+      }
+
+      .music_20_756 {
+        height: 371px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-shrink: 0;
+        align-self: stretch;
+        position: relative;
+        width: 100%;
+      }
+
+      .music_20_757 {
+        position: relative;
+        width: 379px;
+        height: 370px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        isolation: isolate;
+      }
+
+      .music_20_766 {
+        width: 100%;
+        height: 284px;
+        position: relative;
+        z-index: 2;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        align-self: stretch;
+      }
+
+      .music_20_758 {
+        position: absolute;
+        top: auto;
+        left: 0;
+        font-size: 20px;
+        font-family: Inter;
+        font-weight: 700;
+        line-height: 36px;
+        letter-spacing: 1px;
+        color: #121212;
+        white-space: pre;
+        bottom: 30px;
+        z-index: 0;
+      }
+
+      .music_20_762 {
+        position: absolute;
+        top: auto;
+        left: 0;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #929292;
+        white-space: pre;
+        bottom: 0;
+        z-index: 1;
+      }
+
+      .music_20_767 {
+        position: relative;
+        width: 381px;
+        height: 371px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        isolation: isolate;
+      }
+
+      .music_20_776 {
+        width: 100%;
+        height: 286px;
+        position: relative;
+        z-index: 2;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        align-self: stretch;
+      }
+
+      .music_20_768 {
+        position: absolute;
+        top: auto;
+        left: 1px;
+        font-size: 20px;
+        font-family: Inter;
+        font-weight: 700;
+        line-height: 36px;
+        letter-spacing: 1px;
+        color: #121212;
+        white-space: pre;
+        bottom: 29px;
+        z-index: 0;
+      }
+
+      .music_20_772 {
+        position: absolute;
+        top: auto;
+        left: 1px;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #929292;
+        white-space: pre;
+        bottom: 0;
+        z-index: 1;
+      }
+
+      .music_20_777 {
+        position: relative;
+        width: 380px;
+        height: 371px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        isolation: isolate;
+      }
+
+      .music_20_786 {
+        width: 100%;
+        height: 285px;
+        position: relative;
+        z-index: 2;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        align-self: stretch;
+      }
+
+      .music_20_778 {
+        position: absolute;
+        top: auto;
+        left: 0;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #929292;
+        white-space: pre;
+        bottom: 0;
+        z-index: 0;
+      }
+
+      .music_20_782 {
+        position: absolute;
+        top: auto;
+        left: 0;
+        font-size: 20px;
+        font-family: Inter;
+        font-weight: 700;
+        line-height: 36px;
+        letter-spacing: 1px;
+        color: #121212;
+        white-space: pre;
+        bottom: 30px;
+        z-index: 1;
+      }
+
+      .music_0_5 {
+        width: 1200px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 0;
+        margin-top: 120px;
+      }
+
+      .music_0_7 {
+        flex-shrink: 0;
+        font-size: 24px;
+        font-family: Inter;
+        font-weight: 600;
+        line-height: 32px;
+        letter-spacing: 0px;
+        color: #121212;
+        white-space: pre;
+      }
+
+      .music_0_9 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        flex-shrink: 0;
+        position: relative;
+      }
+
+      .music_0_10 {
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #121212;
+        white-space: pre;
+      }
+
+      .music_0_12 {
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #121212;
+        white-space: pre;
+      }
+
+      .music_0_13 {
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #121212;
+        white-space: pre;
+      }
+
+      .music_0_14 {
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #121212;
+        white-space: pre;
+      }
+
+      .music_0_16 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-top: 12px;
+        padding-right: 20px;
+        padding-bottom: 12px;
+        padding-left: 20px;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        background-color: #7868e6;
+        font-size: 14px;
+        font-family: Inter;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0px;
+        color: #ffffff;
+        white-space: pre;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="music_0_4">
+      <div class="music_0_158">
+        <div class="music_0_208">
+          <span class="music_0_209">Rendi Fadillah</span>
+          <div class="music_0_210">
+            <span class="music_0_211">Project</span><span class="music_0_212">Journey</span><span class="music_0_213">Service</span><span class="music_0_214">Contact</span>
+          </div>
+        </div>
+        <div class="flexContainer_6_music_0_158">
+          <div class="music_20_593">
+            <div class="music_20_598">
+              <div class="music_20_552">
+                <div class="music_0_198">
+                  <span class="music_0_199">Hi, I’m Rendi Fadillah<br />Profesional Frontend<br />Developers </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="music_20_603">
+            <div class="music_20_0049">
+              <span class="music_20_0054">I’m Frontend Website<br />Developers</span
+              ><span class="music_20_0058">Freelance Frontend Website Developers and Product Designers <br />based on Jakarta, Indonesia </span><span class="music_20_0062">Hire Me</span>
+            </div>
+            <div class="music_20_0007">
+              <span class="music_20_0014">My Skills</span>
+              <div class="music_20_0019">
+                <span class="music_20_0020">Frontend Developer</span>
+                <div class="music_20_0024">
+                  <div class="music_20_0025"></div>
+                  <div class="music_20_0026"></div>
+                </div>
+              </div>
+              <div class="music_20_0027">
+                <span class="music_20_0028">Product Thinking</span>
+                <div class="music_20_0032">
+                  <div class="music_20_0033"></div>
+                  <div class="music_20_0034"></div>
+                </div>
+              </div>
+              <div class="music_20_0035">
+                <span class="music_20_0036">UI/UX Designers</span>
+                <div class="music_20_0040">
+                  <div class="music_20_0041"></div>
+                  <div class="music_20_0042"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="music_0_98">
+        <div class="music_20_919">
+          <span class="music_20_924">My Recent Client</span><span class="music_20_929">Perusahaan - perusahaan besar yang sudah<br />bekerja sama dengan saya</span>
+        </div>
+        <div class="music_0_102">
+          <div class="music_0_103">
+            <img
+              class="music_0_104"
+              src="https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/45533127482/7531/f1d1/38c2/1b27825657798bddf3bda80e4e33ffc6.png" /><img
+              class="music_0_107"
+              src="https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/45533126495/a93b/fbca/5ebe/b037ad461365ff651d26aefe1b8fb9f8.png" /><img
+              class="music_0_114"
+              src="https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/45533126540/7ab2/364c/3f59/919edb2c1a180dae1518af693da9cf17.png" /><img
+              class="music_0_117"
+              src="https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/45533128611/bc35/8db5/acb7/efea3dfcddfc64a381cada39a3b8d162.png" />
+          </div>
+          <div class="music_0_123">
+            <img
+              class="music_0_124"
+              src="https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/45533128683/2865/007f/2e8a/8135671a151eae422a33554d7a19858b.png" /><img
+              class="music_0_136"
+              src="https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/45533127760/a18c/bb21/7bfb/6763c99ef2fcdbd972a8020212319df8.png" /><img
+              class="music_0_141"
+              src="https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/45533126694/18e8/bf05/a6a6/c1152f1cb70c1e29545f58e7f54376f3.png" /><img
+              class="music_0_153"
+              src="https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/45533129922/4b30/a881/4ad1/2168097fedbca3fce1bf64604f0b48f1.png" />
+          </div>
+        </div>
+      </div>
+      <div class="music_0_54">
+        <div class="music_20_807"><span class="music_20_812">Specialities</span><span class="music_20_817">Beberapa keahlian saya dalam menangani product digital</span></div>
+        <div class="music_0_58">
+          <div class="music_20_842">
+            <div class="music_20_847"></div>
+            <div class="music_20_848">
+              <img
+                class="music_20_857"
+                src="https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/45533127192/e9ac/8215/d143/18e0448dbc63b0bd5a7e44206e8af097.png" /><span class="music_20_849">Product Thinking</span
+              ><span class="music_20_853">product thinking is a method of<br />analyzing a product using a design<br />thinking framework</span>
+            </div>
+          </div>
+          <div class="music_20_866">
+            <div class="music_20_871"></div>
+            <div class="music_20_872">
+              <img
+                class="music_20_881"
+                src="https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/45533127284/a13d/aebd/10b1/34040a759f8c2f5d79aa4b11209d1d61.png" /><span class="music_20_873">UI/UX Designers</span
+              ><span class="music_20_877">Design all screen from client brief<br />and sometimes build the company<br />design system</span>
+            </div>
+          </div>
+          <div class="music_20_446">
+            <div class="music_0_87"></div>
+            <div class="flexContainer_5_music_20_446">
+              <img
+                class="music_0_88"
+                src="https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/45533129146/4479/a61d/84eb/79bc487de9c75a0e5d97a50cc4013431.png" />
+              <div class="music_20_891">
+                <span class="music_20_898">Frontend Developer</span><span class="music_20_902">The skill is a slicing all component<br />from design to code and make the<br />website responsive</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="music_20_721">
+        <div class="music_20_726"><span class="music_20_727">My Portfolio</span><span class="music_20_731">Beberapa portfolio yang saya kerjakan untuk client client saya</span></div>
+        <div class="music_20_735">
+          <div class="music_20_736">
+            <img
+              class="music_20_737"
+              src="https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/45533123321/9cac/ec75/d83e/f128da2070689add8fc9975c901f18c6.png" /><span class="music_20_738"
+              >Gaming Store Landing Page</span
+            ><span class="music_20_742">Web Designers</span>
+          </div>
+          <div class="music_20_746">
+            <img
+              class="music_20_755"
+              src="https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/45533123511/ff06/1438/11ac/381a35ff24a4ce705072a7838ae198d9.png" /><span class="music_20_747"
+              >UI Design Digital Agency</span
+            ><span class="music_20_751">UI/UX Design</span>
+          </div>
+        </div>
+        <div class="music_20_756">
+          <div class="music_20_757">
+            <img
+              class="music_20_766"
+              src="https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/45533125763/15dd/955b/a2e1/58c06a5f12ec3fe3bf59510cc6df0275.png" /><span class="music_20_758"
+              >E - Learning Landing Page</span
+            ><span class="music_20_762">Web Designers</span>
+          </div>
+          <div class="music_20_767">
+            <img
+              class="music_20_776"
+              src="https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/45533127900/19a2/43f8/2f93/07ea5f9a09cfa033e9d8862afa575d96.png" /><span class="music_20_768">Travel App Mobile</span
+            ><span class="music_20_772">UI/UX Design</span>
+          </div>
+          <div class="music_20_777">
+            <img
+              class="music_20_786"
+              src="https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/45533128012/d8d3/9dfd/73a2/bbd2e0800c02bdd9aed7c775878b553f.png" /><span class="music_20_778">Web Designers</span
+            ><span class="music_20_782">Booking Villa’s App</span>
+          </div>
+        </div>
+      </div>
+      <div class="music_0_5">
+        <span class="music_0_7">Rendi Fadillah</span>
+        <div class="music_0_9">
+          <span class="music_0_10">Github</span><span class="music_0_12">Instagram</span><span class="music_0_13">Dribble</span><span class="music_0_14">Behance</span
+          ><span class="music_0_16">Hire Me</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
