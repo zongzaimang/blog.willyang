@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3ab69a4a98946a14",
+        "id": "5a2fe8c7d2d8c8a9",
         "type": "tabs",
         "children": [
           {
-            "id": "8c4ffa210594f485",
+            "id": "888396f93963617b",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -81,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2022-12-7-npm-binary-collection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2022-12-7-npm-binary-collection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -120,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "2022-12-7-npm-binary-collection.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -142,8 +138,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f35fcb98ca5dad39",
+  "active": "888396f93963617b",
   "lastOpenFiles": [
+    "2022-09-12-机场配置Clash.md",
     "2024-09-12-机场配置Clash.md",
     "2022-12-7-npm-binary-collection.md",
     "2024-07-21-debian-install.md"
