@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "b9dc70e274517301",
+        "id": "3ab69a4a98946a14",
         "type": "tabs",
         "children": [
           {
-            "id": "69d9d2d2d696af4f",
+            "id": "8c4ffa210594f485",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2024-09-12-机场配置Clash.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024-09-12-机场配置Clash.md",
+                "file": "2022-12-7-npm-binary-collection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024-09-12-机场配置Clash.md",
+                "file": "2022-12-7-npm-binary-collection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024-09-12-机场配置Clash.md"
+                "file": "2022-12-7-npm-binary-collection.md"
               }
             }
           }
@@ -146,9 +142,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "69d9d2d2d696af4f",
+  "active": "f35fcb98ca5dad39",
   "lastOpenFiles": [
-    "2024-07-21-debian-install.md",
-    "2024-09-12-机场配置Clash.md"
+    "2024-09-12-机场配置Clash.md",
+    "2022-12-7-npm-binary-collection.md",
+    "2024-07-21-debian-install.md"
   ]
 }
