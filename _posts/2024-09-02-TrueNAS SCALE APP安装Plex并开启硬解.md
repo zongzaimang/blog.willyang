@@ -1,8 +1,7 @@
 ---
 layout: mypost
 title: rueNAS SCALE APP安装Plex并开启硬解
-categories:
-  - TrueNAS
+categories: [TrueNAS]
 ---
 [哔哩哔哩](https://www.bilibili.com/video/BV1EL41147B4/)
 

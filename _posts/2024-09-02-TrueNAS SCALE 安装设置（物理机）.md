@@ -1,8 +1,7 @@
 ---
 layout: mypost
 title: TrueNAS SCALE 安装设置（物理机）
-categories:
-  - TrueNAS
+categories: [TrueNAS]
 ---
 [哔哩哔哩视频](https://www.bilibili.com/video/BV1q3411i7Nq?share_source=copy_web)
 
