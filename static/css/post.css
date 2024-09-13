@@ -1,5 +1,5 @@
 .page-post {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
   word-break: break-all;
 }
@@ -9,7 +9,7 @@
   color: #666666;
 }
 .page-post .subtitle {
-  font-size: 12px;
+  font-size: 14px;
   color: #999999;
 }
 .page-post .post > * {
