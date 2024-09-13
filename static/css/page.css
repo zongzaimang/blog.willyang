@@ -31,16 +31,16 @@
 }
 .list-post li .categories {
   flex-shrink: 0;
-  padding: 3px 0;
+  padding: 4px 0;
   margin-left: 10px;
 }
 .list-post li .categories a {
-  font-size: 12px;
+  font-size: 14px;
   color: #666666;
   margin-left: 8px;
 }
 .list-category h2 {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: bold;
   padding: 12px 0;
 }
@@ -50,7 +50,7 @@
 .list-category div a {
   margin: 4px 6px;
   white-space: nowrap;
-  font-size: 15px;
+  font-size: 16px;
   display: inline-block;
   border-bottom: 1px solid #333333;
 }
