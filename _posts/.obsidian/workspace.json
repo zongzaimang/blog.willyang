@@ -11,8 +11,12 @@
             "id": "9de73e1bee21397e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "2024-09-02-TrueNAS SCALE APP安装Plex并开启硬解.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "2024-09-02-TrueNAS SCALE APP安装Plex并开启硬解.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "2024-09-02-TrueNAS SCALE APP安装Plex并开启硬解.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "2024-09-02-TrueNAS SCALE APP安装Plex并开启硬解.md"
+              }
             }
           }
         ]
@@ -140,10 +148,32 @@
   },
   "active": "9de73e1bee21397e",
   "lastOpenFiles": [
-    "2024-09-02-TrueNAS SCALE APP安装Plex并开启硬解.md",
     "2024-09-11-机场配置Clash.md",
+    "2024-09-02-TrueNAS SCALE APP安装Plex并开启硬解.md",
     "2024-09-02-TrueNAS SCALE 安装设置（物理机）.md",
+    "2022-03-21-flex-layout-bug.md",
+    "2022-05-15-virtualbox-network.md",
     "2022-08-21-IndexedDB.md",
+    "2022-07-10-npm-wrap-binary.md",
+    "2022-02-13-apisix-证书自动化.md",
+    "2022-04-23-白嫖-fly-io-服务器.md",
+    "2021-06-13-WSL环境配置.md",
+    "2021-02-21-web项目快速切换到serverless.md",
+    "2021-01-11-主题适配夜间模式.md",
+    "2021-12-28-promise并发控制.md",
+    "2021-09-01-php镜像安装模块.md",
+    "2021-07-09-vue业务dialog封装.md",
+    "2021-06-27-一个git-bash的一个坑.md",
+    "2020-11-15-idea远程部署和调试.md",
+    "2020-10-06-像图片一样缩放svg.md",
+    "2020-09-06-python快速上手.md",
+    "2020-07-16-react快速上手.md",
+    "2020-06-03-发布自己的npm包.md",
+    "2020-05-25-spring-boot-笔记.md",
+    "2020-04-29-webview中键盘适配的一些坑.md",
+    "2020-03-17-android-抓包总结.md",
+    "2020-02-29-go-gui.md",
+    "2020-02-26-gRPC-usage.md",
     "Pasted image 20240913120127.png",
     "{FE87D5D6-59F4-4B71-AB0B-7D80330CF269}.png",
     "{655B5EFF-0B18-4038-B5C3-9DE86FEAB374}.png",
@@ -153,10 +183,6 @@
     "{D4B9C2B1-1E4B-4BE6-A021-75A8A82FCFC0} 3.png",
     "{D4B9C2B1-1E4B-4BE6-A021-75A8A82FCFC0} 2.png",
     "{D4B9C2B1-1E4B-4BE6-A021-75A8A82FCFC0} 1.png",
-    "{D4B9C2B1-1E4B-4BE6-A021-75A8A82FCFC0}.png",
-    "2022-07-10-npm-wrap-binary.md",
-    "2015-01-01-主题预览.md",
-    "2022-12-7-机场配置Clash.md",
-    "2024-07-21-debian-install.md"
+    "{D4B9C2B1-1E4B-4BE6-A021-75A8A82FCFC0}.png"
   ]
 }
