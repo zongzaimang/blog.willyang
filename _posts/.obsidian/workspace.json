@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "814fbb8e3e67ab22",
+        "id": "2eb77314cb8adca6",
         "type": "tabs",
         "children": [
           {
-            "id": "ec8aaf16ef21ee82",
+            "id": "c743df28e182c9da",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "2024-09-02-TrueNAS SCALE 安装设置（物理机）.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "2024-09-02-TrueNAS SCALE 安装设置（物理机）.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "2024-09-02-TrueNAS SCALE 安装设置（物理机）.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "2024-09-02-TrueNAS SCALE 安装设置（物理机）.md"
+              }
             }
           }
         ]
@@ -138,11 +146,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "ec8aaf16ef21ee82",
+  "active": "c743df28e182c9da",
   "lastOpenFiles": [
+    "2024-09-11-机场配置Clash.md",
     "2024-09-02-TrueNAS SCALE 安装设置（物理机）.md",
     "2022-08-21-IndexedDB.md",
-    "2024-09-11-机场配置Clash.md",
     "Pasted image 20240913120127.png",
     "{FE87D5D6-59F4-4B71-AB0B-7D80330CF269}.png",
     "{655B5EFF-0B18-4038-B5C3-9DE86FEAB374}.png",

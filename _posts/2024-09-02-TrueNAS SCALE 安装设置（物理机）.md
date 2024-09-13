@@ -1,6 +1,6 @@
 ---
 layout: mypost
-title: 如何使用“机场”配置Clash等软件
+title: TrueNAS SCALE 安装设置（物理机）
 categories:
   - TrueNAS
 ---
