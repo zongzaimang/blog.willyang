@@ -3,7 +3,7 @@ layout: mypost
 title: 关于我
 ---
 
-> Hello 陌生人，欢迎访问 Will Yang's blog
+> Hello 陌生人，欢迎访问 Will Yang 博客
 
 该博客托管于 GitHub Page，留言页面使用腾讯的“吐个槽”
 
