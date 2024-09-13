@@ -203,7 +203,7 @@ input:-webkit-autofill {
   }
   .header .menu {
     margin-right: -2px;
-    text-align: left;
+    text-align: right;
   }
   .header .menu a {
     margin: 2px 5px;
