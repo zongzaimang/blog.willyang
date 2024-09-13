@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "427cc7911aaef632",
+        "id": "a012bbb7be3acef9",
         "type": "tabs",
         "children": [
           {
-            "id": "e09b1ceac3115b2e",
+            "id": "3c39c53b2f2fa15f",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -138,12 +138,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "e09b1ceac3115b2e",
+  "active": "3c39c53b2f2fa15f",
   "lastOpenFiles": [
-    "2024-09-12-如何使用 Clash 翻墙.md",
-    "2024-09-10-机场推荐魔戒.net.md",
     "2024-09-02-TrueNAS SCALE APP安装Plex并开启硬解.md",
     "2024-09-02-TrueNAS SCALE 安装设置（物理机）.md",
+    "2024-09-10-机场推荐魔戒.net.md",
+    "2024-09-12-如何使用 Clash 翻墙.md",
     "{FE87D5D6-59F4-4B71-AB0B-7D80330CF269}.png",
     "Pasted image 20240913120127.png",
     "2024-09-11-机场配置Clash.md",
