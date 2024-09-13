@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "0e62664677d459de",
+        "id": "427cc7911aaef632",
         "type": "tabs",
         "children": [
           {
-            "id": "ca23734522c4e933",
+            "id": "e09b1ceac3115b2e",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -138,7 +138,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "ca23734522c4e933",
+  "active": "e09b1ceac3115b2e",
   "lastOpenFiles": [
     "2024-09-12-如何使用 Clash 翻墙.md",
     "2024-09-10-机场推荐魔戒.net.md",
