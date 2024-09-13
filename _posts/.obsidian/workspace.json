@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "11fce769760a32d9",
+        "id": "953bc50a954507d9",
         "type": "tabs",
         "children": [
           {
-            "id": "9de73e1bee21397e",
+            "id": "68a7781548b0788c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2024-09-02-TrueNAS SCALE APP安装Plex并开启硬解.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024-09-02-TrueNAS SCALE APP安装Plex并开启硬解.md",
+                "file": "2024-09-11-如何使用 Clash 翻墙.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024-09-02-TrueNAS SCALE APP安装Plex并开启硬解.md",
+                "file": "2024-09-11-如何使用 Clash 翻墙.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "2024-09-02-TrueNAS SCALE APP安装Plex并开启硬解.md"
+                "file": "2024-09-11-如何使用 Clash 翻墙.md"
               }
             }
           }
@@ -146,9 +142,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "9de73e1bee21397e",
+  "active": "f35fcb98ca5dad39",
   "lastOpenFiles": [
     "2024-09-11-机场配置Clash.md",
+    "2024-09-11-如何使用 Clash 翻墙.md",
     "2024-09-02-TrueNAS SCALE APP安装Plex并开启硬解.md",
     "2024-09-02-TrueNAS SCALE 安装设置（物理机）.md",
     "2022-03-21-flex-layout-bug.md",
@@ -173,7 +170,6 @@
     "2020-04-29-webview中键盘适配的一些坑.md",
     "2020-03-17-android-抓包总结.md",
     "2020-02-29-go-gui.md",
-    "2020-02-26-gRPC-usage.md",
     "Pasted image 20240913120127.png",
     "{FE87D5D6-59F4-4B71-AB0B-7D80330CF269}.png",
     "{655B5EFF-0B18-4038-B5C3-9DE86FEAB374}.png",
