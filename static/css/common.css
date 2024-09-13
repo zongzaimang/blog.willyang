@@ -134,8 +134,8 @@ input:-webkit-autofill {
   user-select: auto;
 }
 .footer {
-  padding: 15px 0;
-  font-size: 14px;
+  padding: 16px 0;
+  font-size: 12px;
 }
 .footer a {
   text-decoration: underline;
