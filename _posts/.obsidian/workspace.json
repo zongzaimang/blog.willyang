@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "480ff6465ac4d474",
+        "id": "814fbb8e3e67ab22",
         "type": "tabs",
         "children": [
           {
-            "id": "cc8814af20185dcd",
+            "id": "ec8aaf16ef21ee82",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2024-09-11-机场配置Clash.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024-09-11-机场配置Clash.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024-09-11-机场配置Clash.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "2024-09-11-机场配置Clash.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,19 +138,21 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "cc8814af20185dcd",
+  "active": "ec8aaf16ef21ee82",
   "lastOpenFiles": [
+    "2024-09-02-TrueNAS SCALE 安装设置（物理机）.md",
+    "2022-08-21-IndexedDB.md",
+    "2024-09-11-机场配置Clash.md",
+    "Pasted image 20240913120127.png",
+    "{FE87D5D6-59F4-4B71-AB0B-7D80330CF269}.png",
     "{655B5EFF-0B18-4038-B5C3-9DE86FEAB374}.png",
     "{55042F5D-CD07-41F5-BA91-E1E0564C48E2}.png",
-    "Pasted image 20240913120127.png",
-    "2024-09-11-机场配置Clash.md",
     "{D4B9C2B1-1E4B-4BE6-A021-75A8A82FCFC0} 5.png",
     "{D4B9C2B1-1E4B-4BE6-A021-75A8A82FCFC0} 4.png",
     "{D4B9C2B1-1E4B-4BE6-A021-75A8A82FCFC0} 3.png",
     "{D4B9C2B1-1E4B-4BE6-A021-75A8A82FCFC0} 2.png",
     "{D4B9C2B1-1E4B-4BE6-A021-75A8A82FCFC0} 1.png",
     "{D4B9C2B1-1E4B-4BE6-A021-75A8A82FCFC0}.png",
-    "2022-08-21-IndexedDB.md",
     "2022-07-10-npm-wrap-binary.md",
     "2015-01-01-主题预览.md",
     "2022-12-7-机场配置Clash.md",
