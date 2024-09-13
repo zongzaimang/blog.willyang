@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "af612899c6d9f960",
+        "id": "36be2dad5e35ca2f",
         "type": "tabs",
         "children": [
           {
-            "id": "5ba670f89c4e2451",
+            "id": "2cf27f83339be649",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -65,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "1a5568bf4b4b61eb",
@@ -81,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024-09-11-如何使用 Clash 翻墙.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024-09-11-如何使用 Clash 翻墙.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -120,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "2024-09-11-如何使用 Clash 翻墙.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -142,14 +138,14 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f35fcb98ca5dad39",
+  "active": "2cf27f83339be649",
   "lastOpenFiles": [
-    "{FE87D5D6-59F4-4B71-AB0B-7D80330CF269}.png",
     "2024-09-11-如何使用 Clash 翻墙.md",
+    "2024-09-02-TrueNAS SCALE 安装设置（物理机）.md",
+    "2024-09-02-TrueNAS SCALE APP安装Plex并开启硬解.md",
+    "{FE87D5D6-59F4-4B71-AB0B-7D80330CF269}.png",
     "Pasted image 20240913120127.png",
     "2024-09-11-机场配置Clash.md",
-    "2024-09-02-TrueNAS SCALE APP安装Plex并开启硬解.md",
-    "2024-09-02-TrueNAS SCALE 安装设置（物理机）.md",
     "2022-03-21-flex-layout-bug.md",
     "2022-05-15-virtualbox-network.md",
     "2022-08-21-IndexedDB.md",
