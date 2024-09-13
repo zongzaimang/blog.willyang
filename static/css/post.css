@@ -1,15 +1,15 @@
 .page-post {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 2;
   word-break: break-all;
 }
 .page-post .title {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
   color: #666666;
 }
 .page-post .subtitle {
-  font-size: 12px;
+  font-size: 20px;
   color: #999999;
 }
 .page-post .post > * {
@@ -22,7 +22,7 @@
 .page-post .post h1,
 .page-post .post h2 {
   font-weight: normal;
-  font-size: 17px;
+  font-size: 20px;
   position: relative;
   cursor: pointer;
 }
@@ -37,7 +37,7 @@
 .page-post h4,
 .page-post h5,
 .page-post h6 {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
 }
 .page-post blockquote {
