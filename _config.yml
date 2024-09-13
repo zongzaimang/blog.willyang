@@ -8,7 +8,7 @@ title: TMaize Blog
 description: TMaize的个人博客
 keywords: TMaize,Blog,Java,Html,JavaScript
 author: TMaize
-footerText: 'Copyright © 2016 皖ICP备16016174号'
+footerText: '©2024 Will Yang. All Rights Reserved'
 
 # 这些不要动
 permalink: /posts/:year/:month/:day/:title.html
