@@ -16,7 +16,7 @@ html[transition] {
 }
 body {
   max-width: 720px;
-  padding: 0 14px;
+  padding: 0 16px;
   margin: 0 auto;
 }
 * {
