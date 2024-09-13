@@ -196,8 +196,8 @@ input:-webkit-autofill {
     justify-content: flex-start;
   }
   .header .menu {
-    margin-right: 2px;
-    text-align: right;
+    margin-right: -2px;
+    text-align: left;
   }
   .header .menu a {
     margin: 2px 5px;
