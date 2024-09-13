@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "f9359401a001e410",
+        "id": "0e62664677d459de",
         "type": "tabs",
         "children": [
           {
-            "id": "39fbfb3410f25fdc",
+            "id": "ca23734522c4e933",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2024-09-12-如何使用 Clash 翻墙.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2024-09-12-如何使用 Clash 翻墙.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2024-09-12-如何使用 Clash 翻墙.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "2024-09-12-如何使用 Clash 翻墙.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,10 +138,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "39fbfb3410f25fdc",
+  "active": "ca23734522c4e933",
   "lastOpenFiles": [
-    "2024-09-10-机场推荐魔戒.net.md",
     "2024-09-12-如何使用 Clash 翻墙.md",
+    "2024-09-10-机场推荐魔戒.net.md",
     "2024-09-02-TrueNAS SCALE APP安装Plex并开启硬解.md",
     "2024-09-02-TrueNAS SCALE 安装设置（物理机）.md",
     "{FE87D5D6-59F4-4B71-AB0B-7D80330CF269}.png",
