@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "95a2e49e6493ff1e",
+        "id": "e63538a2e67cf7d8",
         "type": "tabs",
         "children": [
           {
-            "id": "53fb9ccfd5e48138",
+            "id": "a32274e0aafb0e38",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "2015-01-01-主题预览.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2015-01-01-主题预览.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2015-01-01-主题预览.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "2015-01-01-主题预览.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,8 +138,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "53fb9ccfd5e48138",
+  "active": "a32274e0aafb0e38",
   "lastOpenFiles": [
+    "2015-01-01-主题预览.md",
     "2024-09-10-机场推荐.md",
     "2024-09-12-如何使用 Clash 翻墙.md",
     "2024-09-02-TrueNAS SCALE APP安装Plex并开启硬解.md",
@@ -175,7 +168,6 @@
     "2020-06-03-发布自己的npm包.md",
     "2020-05-25-spring-boot-笔记.md",
     "2020-04-29-webview中键盘适配的一些坑.md",
-    "2020-03-17-android-抓包总结.md",
     "{655B5EFF-0B18-4038-B5C3-9DE86FEAB374}.png",
     "{55042F5D-CD07-41F5-BA91-E1E0564C48E2}.png",
     "{D4B9C2B1-1E4B-4BE6-A021-75A8A82FCFC0} 5.png",
