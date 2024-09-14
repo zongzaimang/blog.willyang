@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f65817fdc6f879b6",
+        "id": "0cdfcc439b88ac81",
         "type": "tabs",
         "children": [
           {
-            "id": "5054b054de4da8a8",
+            "id": "fd71341479b40829",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -138,7 +138,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "5054b054de4da8a8",
+  "active": "fd71341479b40829",
   "lastOpenFiles": [
     "2015-01-01-主题预览.md",
     "2024-09-10-机场推荐.md",
