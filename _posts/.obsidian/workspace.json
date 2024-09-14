@@ -11,8 +11,12 @@
             "id": "85b877e7c5b1d76d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "2024-09-14-Shadowrocket 使用教程.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "2024-09-14-Shadowrocket 使用教程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "2024-09-14-Shadowrocket 使用教程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "2024-09-14-Shadowrocket 使用教程.md"
+              }
             }
           }
         ]
@@ -138,11 +146,12 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f35fcb98ca5dad39",
+  "active": "85b877e7c5b1d76d",
   "lastOpenFiles": [
     "2024-09-12-如何使用 Clash 翻墙.md",
-    "2015-01-01-主题预览.md",
+    "2024-09-14-Shadowrocket 使用教程.md",
     "2024-09-10-机场推荐.md",
+    "2015-01-01-主题预览.md",
     "2024-09-02-TrueNAS SCALE APP安装Plex并开启硬解.md",
     "2024-09-02-TrueNAS SCALE 安装设置（物理机）.md",
     "{FE87D5D6-59F4-4B71-AB0B-7D80330CF269}.png",
@@ -167,7 +176,6 @@
     "2020-07-16-react快速上手.md",
     "2020-06-03-发布自己的npm包.md",
     "2020-05-25-spring-boot-笔记.md",
-    "2020-04-29-webview中键盘适配的一些坑.md",
     "{655B5EFF-0B18-4038-B5C3-9DE86FEAB374}.png",
     "{55042F5D-CD07-41F5-BA91-E1E0564C48E2}.png",
     "{D4B9C2B1-1E4B-4BE6-A021-75A8A82FCFC0} 5.png",
