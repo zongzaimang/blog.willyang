@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "0cdfcc439b88ac81",
+        "id": "a558e6b4d2e5375e",
         "type": "tabs",
         "children": [
           {
-            "id": "fd71341479b40829",
+            "id": "b0b9789170a1ebc4",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -81,6 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "2015-01-01-主题预览.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "2015-01-01-主题预览.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +120,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "2015-01-01-主题预览.md"
+              }
             }
           }
         ]
@@ -138,7 +142,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "fd71341479b40829",
+  "active": "f35fcb98ca5dad39",
   "lastOpenFiles": [
     "2015-01-01-主题预览.md",
     "2024-09-10-机场推荐.md",
