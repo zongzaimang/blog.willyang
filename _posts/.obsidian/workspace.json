@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1b46848d42147e0b",
+        "id": "5a4839e35f69f0ff",
         "type": "tabs",
         "children": [
           {
-            "id": "5140a40cc7200b25",
+            "id": "85b877e7c5b1d76d",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -81,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2015-01-01-主题预览.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "2015-01-01-主题预览.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -120,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "2015-01-01-主题预览.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -144,9 +140,9 @@
   },
   "active": "f35fcb98ca5dad39",
   "lastOpenFiles": [
+    "2024-09-12-如何使用 Clash 翻墙.md",
     "2015-01-01-主题预览.md",
     "2024-09-10-机场推荐.md",
-    "2024-09-12-如何使用 Clash 翻墙.md",
     "2024-09-02-TrueNAS SCALE APP安装Plex并开启硬解.md",
     "2024-09-02-TrueNAS SCALE 安装设置（物理机）.md",
     "{FE87D5D6-59F4-4B71-AB0B-7D80330CF269}.png",
