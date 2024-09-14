@@ -16,25 +16,25 @@ Shadowrocket 有两种导入方式:
 
 点击后iOS系统会跳转到Shadowrocket客户端内并自动将节点订阅信息填好。
 
-![](https://wikibos.com/wp-content/uploads/2023/04/ios-import-new-01-1.png)
+![](https://s2.loli.net/2024/09/14/jDPsKunm92apbkE.png)
 
 ---
 
 2、在客户端**首页**可以看到一键订阅生成的所有节点及相关信息。
 
-![](https://wikibos.com/wp-content/uploads/2022/01/shadowrocket-new-01.png)
+![](https://s2.loli.net/2024/09/14/hCVry4JLKUHnT9F.png)
 
 ---
 
 3、进入**配置**选项页，建议使用默认配置文件即可。
 
-![](https://wikibos.com/wp-content/uploads/2018/11/5-1.png)
+![](https://s2.loli.net/2024/09/14/RJ1tFsaneEYk3Xl.png)
 
 ---
 
 4、进入**设置**选项页，按照下图将**订阅**设置项的“**打开时更新**”和“**自动后台更新**”选项同时开启。
 
-![](https://wikibos.com/wp-content/uploads/2022/01/shadowrocket-new-03.png)
+![](https://s2.loli.net/2024/09/14/NOTMolR2PtcnAqs.png)
 
 ---
 
@@ -56,37 +56,37 @@ Shadowrocket 有两种导入方式:
 
 点击后会将订阅地址复制到iOS系统剪贴板中，以供下一步手动导入使用。
 
-![](https://wikibos.com/wp-content/uploads/2023/04/ios-import-new-02-1.png)
+![](https://s2.loli.net/2024/09/14/mrf6tLySNQGU2qF.png)
 
 ---
 
 2、进入客户端**首页**，选择右上角 + 按键。
 
-![](https://wikibos.com/wp-content/uploads/2018/11/2-1.png)
+![](https://s2.loli.net/2024/09/14/Vvse8NLr5R2aiyW.png)
 
 ---
 
 3、类型选择「**Subscribe**」，将第一步复制的订阅地址粘贴到**URL栏**中，在下方**备注**区域输入分组名称，最后点击右上角**完成**按钮保存。
 
-![](https://wikibos.com/wp-content/uploads/2022/01/shadowrocket-new-02.png)
+![](https://s2.loli.net/2024/09/14/YFlfAhSEwgyvq18.png)
 
 ---
 
 4、回到客户端**首页**，可以看到客户端已经自动下载好所有节点及相关信息。
 
-![](https://wikibos.com/wp-content/uploads/2022/01/shadowrocket-new-01.png)
+![](https://s2.loli.net/2024/09/14/hCVry4JLKUHnT9F.png)
 
 ---
 
 5、进入**配置**选项页，建议使用默认配置文件即可。
 
-![](https://wikibos.com/wp-content/uploads/2018/11/5-1.png)
+![](https://s2.loli.net/2024/09/14/RJ1tFsaneEYk3Xl.png)
 
 ---
 
 6、进入**设置**选项页，按照下图将**订阅**设置项的“**打开时更新**”和“**自动后台更新**”选项同时开启。
 
-![](https://wikibos.com/wp-content/uploads/2022/01/shadowrocket-new-03.png)
+![](https://s2.loli.net/2024/09/14/NOTMolR2PtcnAqs.png)
 
 ---
 
@@ -119,10 +119,9 @@ Shadowrocket 有两种导入方式:
 
 1. 进入**配置**选项页，点击右上方的 “**+**” 按钮新增配置文件。
 2. 在弹出的输入栏中粘贴第三方配置文件地址，然后点击下载按钮即可。  
-    ![🔹](https://s.w.org/images/core/emoji/11/svg/1f539.svg)第三方配置文件样例（白名单过滤规则）：  
+    ![🔹](第三方配置文件样例（白名单过滤规则）：  
     `https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/release/sr_top500_whitelist.conf`  
-    ![🔹](https://s.w.org/images/core/emoji/11/svg/1f539.svg)第三方配置文件样例（带策略组懒人配置）：  
-    `https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/release/lazy_group.conf`  
+    ![🔹](content.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/release/lazy_group.conf`  
     更多规则可查看：[https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever](https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever "https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever")
 3. 用户可保存多份不同的配置文件，方便来回切换。
 
