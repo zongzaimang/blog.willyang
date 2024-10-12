@@ -11,8 +11,12 @@
             "id": "8c1e274662d98ef8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "2024-09-14-Shadowrocket 使用教程.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -142,7 +146,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f35fcb98ca5dad39",
+  "active": "8c1e274662d98ef8",
   "lastOpenFiles": [
     "2024-09-12-如何使用 Clash 翻墙.md",
     "2024-09-14-Shadowrocket 使用教程.md",
