@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1d7305882119325c",
+        "id": "2d0dafc5abf4c87e",
         "type": "tabs",
         "children": [
           {
-            "id": "d3cc89e78b128354",
+            "id": "cfa1d31c7c7a70dd",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -81,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2024-10-12-免费的在线影视网站汇总.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2024-10-12-免费的在线影视网站汇总.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -120,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "_posts/2024-10-12-免费的在线影视网站汇总.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -142,7 +138,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "1d841880cf0767d8",
+  "active": "cfa1d31c7c7a70dd",
   "lastOpenFiles": [
     "_posts/2024-10-12-免费的在线影视网站汇总.md",
     "_posts/2024-09-14-Shadowrocket 使用教程.md"
