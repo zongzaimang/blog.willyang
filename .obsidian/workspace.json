@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "bf989679d6529dfb",
+        "id": "ce4c563ebc7fb472",
         "type": "tabs",
         "children": [
           {
-            "id": "b8267f1f60ec956a",
+            "id": "1b30ae394ec587f0",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -138,6 +138,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "b8267f1f60ec956a",
-  "lastOpenFiles": []
+  "active": "1d841880cf0767d8",
+  "lastOpenFiles": [
+    "_posts/2024-10-12-免费的在线影视网站汇总.md",
+    "_posts/2024-09-14-Shadowrocket 使用教程.md"
+  ]
 }
