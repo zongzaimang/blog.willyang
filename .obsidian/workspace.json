@@ -4,47 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "2d0dafc5abf4c87e",
+        "id": "e35c7b781d35a462",
         "type": "tabs",
         "children": [
           {
-            "id": "cfa1d31c7c7a70dd",
+            "id": "a4f620aee86a2a2a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "preview",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "3d5badbfde086588",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/2024-10-12-免费的在线影视网站汇总 2.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3f8a1a4dfc1cae19",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_posts/2024-10-12-免费的在线影视网站汇总 2.md",
-                "mode": "preview",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -110,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/2024-10-12-免费的在线影视网站汇总 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/2024-10-12-免费的在线影视网站汇总 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "_posts/2024-10-12-免费的在线影视网站汇总 2.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -171,11 +138,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "3f8a1a4dfc1cae19",
+  "active": "a4f620aee86a2a2a",
   "lastOpenFiles": [
+    "_posts/2024-10-12-免费的在线影视网站汇总 2.md",
     "_drafts/未命名.md",
     "_drafts/2024-10-12-免费的在线影视网站汇总 2 1.md",
-    "_posts/2024-10-12-免费的在线影视网站汇总 2.md",
     "_posts/2024-10-12-免费的在线影视网站汇总.md",
     "_drafts",
     "404.md",
