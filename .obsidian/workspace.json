@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "4a7a974d56557905",
+        "id": "fec13eb6ad5878ff",
         "type": "tabs",
         "children": [
           {
-            "id": "1ea176980f415306",
+            "id": "0545079537891ada",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_drafts/2024-10-12-免费的在线影视网站汇总 2 1.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_drafts/2024-10-12-免费的在线影视网站汇总 2 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_drafts/2024-10-12-免费的在线影视网站汇总 2 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "_drafts/2024-10-12-免费的在线影视网站汇总 2 1.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,15 +138,16 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "1ea176980f415306",
+  "active": "0545079537891ada",
   "lastOpenFiles": [
-    "_drafts/2024-10-12-免费的在线影视网站汇总 2.md",
-    "_drafts/2024-10-12-免费的在线影视网站汇总 2 1.md",
+    "_posts/2024-10-31-全网免费音乐搜索汇总.md",
     "_posts/2024-10-12-免费的在线影视网站汇总.md",
+    "README.md",
+    "_drafts/2024-10-12-免费的在线影视网站汇总 2 1.md",
+    "_drafts/2024-10-12-免费的在线影视网站汇总 2.md",
     "_drafts/未命名.md",
     "_drafts",
     "404.md",
-    "README.md",
     "_posts/2024-09-14-Shadowrocket 使用教程.md"
   ]
 }
