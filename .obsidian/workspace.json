@@ -11,8 +11,12 @@
             "id": "1ea176980f415306",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "_drafts/2024-10-12-免费的在线影视网站汇总 2 1.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "_drafts/2024-10-12-免费的在线影视网站汇总 2 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "_drafts/2024-10-12-免费的在线影视网站汇总 2 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "_drafts/2024-10-12-免费的在线影视网站汇总 2 1.md"
+              }
             }
           }
         ]
@@ -141,9 +149,9 @@
   "active": "1ea176980f415306",
   "lastOpenFiles": [
     "_drafts/2024-10-12-免费的在线影视网站汇总 2.md",
-    "_drafts/未命名.md",
     "_drafts/2024-10-12-免费的在线影视网站汇总 2 1.md",
     "_posts/2024-10-12-免费的在线影视网站汇总.md",
+    "_drafts/未命名.md",
     "_drafts",
     "404.md",
     "README.md",
