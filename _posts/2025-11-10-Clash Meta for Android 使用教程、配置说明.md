@@ -12,7 +12,7 @@ categories:
 
 1.直接在[Github](https://github.com/MetaCubeX/ClashMetaForAndroid)上选择合适的版本下载安装。
 
-2.或者从 https://clashmetaforandroid.com/ 中选择合适的版本进行安装，国产手机安装时可能会被阻止，需要退出安全模式完成安装。安装完成后，会看到如下图的启动页面：
+2.或者从 [https://clashverge.net](https://clashmetaforandroid.com/) 中选择合适的版本进行安装，国产手机安装时可能会被阻止，需要退出安全模式完成安装。安装完成后，会看到如下图的启动页面：
 
 ![Clash Meta for Android界面](https://clashmetaforandroid.com/wp-content/uploads/2024/09/start.webp)
 

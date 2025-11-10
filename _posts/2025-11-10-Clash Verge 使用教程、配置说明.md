@@ -1,6 +1,6 @@
 ---
 layout: mypost
-title: Clash Verge 教程-配置使用说明
+title: Clash Verge 使用教程、配置说明
 categories:
   - Windows
   - macOS
@@ -19,7 +19,7 @@ categories:
 
 1.直接从[Github](https://github.com/clash-verge-rev/clash-verge-rev)上下载。
 
-2.或着从 https://clashverge.net 下载 Clash Verge。Windows 用户可选择下载 `.msi` 或 `.exe` 安装文件，Mac 用户根据自己的芯片型号（Intel 或 M1/M2）下载相应的 `.dmg` 文件根据操作系统从下载对应平台的安装包进行安装。
+2.或着从 [https://clashverge.net](https://clashverge.net) 下载 Clash Verge。Windows 用户可选择下载 `.msi` 或 `.exe` 安装文件，Mac 用户根据自己的芯片型号（Intel 或 M1/M2）下载相应的 `.dmg` 文件根据操作系统从下载对应平台的安装包进行安装。
 
 按照提示完成安装。安装完成后，可在设置中将界面语言切换为中文。
 
