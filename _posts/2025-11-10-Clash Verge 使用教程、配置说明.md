@@ -6,8 +6,6 @@ categories:
   - macOS
   - Linux
 ---
-# Clash Verge 教程-配置使用说明
-
 本文包括Clash Verge 详细使用教程以及配置说明。Clash Verge 是流行的桌面网络代理翻墙客户端，界面简洁，功能强大，使用方便。
 
 目前 Clash Verge Rev 仅提供桌面版，Windows\macOS\Linux，暂未推出手机版。
