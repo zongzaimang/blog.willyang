@@ -2,7 +2,6 @@
 layout: mypost
 title: Clash Verge 教程-配置使用说明
 categories:
-  - Clash Verge
   - Windows
   - macOS
   - Linux
@@ -13,20 +12,20 @@ categories:
 
 目前 Clash Verge Rev 仅提供桌面版，Windows\macOS\Linux，暂未推出手机版。
 
-对于 Android 用户，推荐 [==Clash Meta for Android==](https://clashmetaforandroid.com/)。它跟 Clash Verge Rev 一样同样采用 Mihomo 内核，功能强大，简单易用。
+对于 Android 用户，推荐 [Clash Meta for Android](https://clashmetaforandroid.com/)。它跟 Clash Verge Rev 一样同样采用 Mihomo 内核，功能强大，简单易用。
 
-对于 iOS 用户，推荐 [==Sing-Box==](https://getsingbox.com/)。在 iOS 应用市场中，Sing-Box 是少有的免费好用的代理应用。
+对于 iOS 用户，推荐 [Sing-Box](https://getsingbox.com/)。在 iOS 应用市场中，Sing-Box 是少有的免费好用的代理应用。
 
 
 ## **下载和安装**
 
-1.直接从[github](https://github.com/clash-verge-rev/clash-verge-rev)上下载。
+1.直接从[Github](https://github.com/clash-verge-rev/clash-verge-rev)上下载。
 
-2.或从 https://clashverge.net 下载 Clash Verge。Windows 用户可选择下载 `.msi` 或 `.exe` 安装文件，Mac 用户根据自己的芯片型号（Intel 或 M1/M2）下载相应的 `.dmg` 文件根据操作系统从下载对应平台的安装包进行安装。
+2.或着从 https://clashverge.net 下载 Clash Verge。Windows 用户可选择下载 `.msi` 或 `.exe` 安装文件，Mac 用户根据自己的芯片型号（Intel 或 M1/M2）下载相应的 `.dmg` 文件根据操作系统从下载对应平台的安装包进行安装。
 
 按照提示完成安装。安装完成后，可在设置中将界面语言切换为中文。
 
-PS: Clash Verge 只是客户端，需要配合代理节点一起使用，如果还没有购买代理服务，可以参考[==机场推荐==](https://blog.willyang.space/posts/2024/09/10/%E6%9C%BA%E5%9C%BA%E6%8E%A8%E8%8D%90.html)。
+PS: Clash Verge 只是客户端，需要配合代理节点一起使用，如果还没有购买代理服务，可以参考[机场推荐](https://blog.willyang.space/posts/2024/09/10/%E6%9C%BA%E5%9C%BA%E6%8E%A8%E8%8D%90.html)。
 
 ## **配置代理**
 
