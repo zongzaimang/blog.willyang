@@ -39,6 +39,25 @@ bundle exec jekyll serve --watch --host=127.0.0.1 --port=8080
 bundle exec jekyll build --destination=dist
 ```
 
+## 日常发布流程
+
+1. 在 Obsidian 中新建或编辑 `_posts` 下的 Markdown 文章；文章图片和附件放在对应的 `posts/YYYY/MM/DD/` 目录。
+2. 提交并推送内容改动到 `main`。`main` 是生产分支，推送后会由 GitHub Actions 自动构建并发布到 GitHub Pages。
+3. 如需改主题、布局或进行较大调整，请先建立分支；提交 Pull Request 后，工作流只做构建验证，不会影响线上网站。
+
+工作流使用本仓库锁定的 `Gemfile.lock` 安装依赖，因此线上构建过程是可复现的。若希望在发布前预览，请在 WSL 或其他已安装 Ruby/Bundler 的环境中执行：
+
+```bash
+bundle install
+bundle exec jekyll serve --watch --host=127.0.0.1 --port=8080
+```
+
+`OneDrive` 用于跨设备同步，GitHub 用于版本历史和异地副本。Obsidian 的窗口、标签页等个人工作区状态不会再作为日常内容改动提交。
+
+### GitHub Pages 首次切换
+
+在仓库的 **Settings → Pages → Build and deployment** 中将来源改为 **GitHub Actions**。自定义域名仍在该页面设置为 `blog.willyang.space`；使用 Actions 发布时，GitHub 以 Pages 设置中的域名为准。
+
 如果需要替换代码高亮的样式可以通过下面的命令生成 css
 
 ```bash
