@@ -4,23 +4,24 @@ title: 文章分类
 ---
 
 <div class="page page-categories">
+  <header class="page-heading"><p class="eyebrow">Explore / 分类</p><h1>按主题探索</h1><p class="page-description">{{ site.categories.size }} 个分类，找到你感兴趣的内容。</p></header>
   <div class="list-category">
     <h2>所有分类</h2>
-    <div>
+    <div class="category-links">
       {%- for category in site.categories %}
-      <a href="javascript:document.getElementById('{{ category[0] }}').scrollIntoView()">{{ category[0] }}</a>
+      <a href="#{{ category[0] | uri_escape }}">{{ category[0] | escape }} <span>{{ category[1].size }}</span></a>
       {%- endfor %}
     </div>
   </div>
   {%- for category in site.categories %}
   <div class="list-post">
-    <h2 id="{{ category[0] }}">{{ category[0] }}</h2>
+    <h2 id="{{ category[0] | escape }}">{{ category[0] | escape }}</h2>
     <ul>
       {%- for post in category[1] %}
       <li>
-        <span class="date">{{ post.date | date: "%Y/%m/%d" }}</span>
+        <time class="date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y/%m/%d" }}</time>
         <div class="title">
-          <a href="{{ site.baseurl | append: post.url }}" class="hover-underline">{{ post.title }}</a>
+          <a href="{{ site.baseurl | append: post.url }}">{{ post.title | escape }}</a>
         </div>
       </li>
       {%- endfor %}

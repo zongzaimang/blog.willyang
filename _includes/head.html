@@ -5,10 +5,10 @@
   <link rel="canonical" href="{{ site.domainUrl }}{{ site.baseurl }}{{ page.url }}" />
   <meta http-equiv="content-language" content="zh-CN" />
   <meta name="theme-color" content="#ffffff" />
-  <meta name="supported-color-schemes" content="light dark" />
+  <meta name="color-scheme" content="light dark" />
   <meta name="renderer" content="webkit" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="applicable-device" content="pc,mobile" />
   <meta name="author" content="{{ site.author }}" />
   {%- if page.categories %}
@@ -18,14 +18,14 @@
   <meta name="description" content="{{ site.description }}" />
   <meta name="keywords" content="{{ site.keywords }}" />
   {% endif -%}
-  <link rel="icon" href="{{site.baseurl}}/static/img/favicon.ico" />
-  <link rel="apple-touch-icon" href="{{site.baseurl}}/static/img/logo.png" />
+  <link rel="icon" type="image/png" href="{{site.baseurl}}/static/img/wy-logo-blue.png" />
+  <link rel="apple-touch-icon" href="{{site.baseurl}}/static/img/wy-logo-blue.png" />
   <link rel="stylesheet" href="{{site.baseurl}}/static/css/common.css?t={{buildAt}}" />
   <link rel="stylesheet" href="{{site.baseurl}}/static/css/theme-dark.css?t={{buildAt}}" />
   {%- if page.layout == "mypost" %}
-  <link rel="stylesheet" href="{{site.baseurl}}/static/css/post.css?t={{buildAt}}" />
   <link rel="stylesheet" href="{{site.baseurl}}/static/css/code-dark.css?t={{buildAt}}" />
   <link rel="stylesheet" href="{{site.baseurl}}/static/css/code-light.css?t={{buildAt}}" />
+  <link rel="stylesheet" href="{{site.baseurl}}/static/css/post.css?t={{buildAt}}" />
   {%- endif %} {%- if page.layout == "page" %}
   <link rel="stylesheet" href="{{site.baseurl}}/static/css/page.css?t={{buildAt}}" />
   {%- endif %}
@@ -33,15 +33,19 @@
     window.blog = {
       baseurl: '{{site.baseurl}}',
       buildAt: '{{buildAt}}',
-      darkMode: false,
-      initDarkMode: function (flag) {
-        if (flag && flag === 'true') this.darkMode = true
-        else if (flag && flag === 'false') this.darkMode = false
-        else this.darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-        document.documentElement.className = this.darkMode ? 'dark' : ''
-        document.querySelector('meta[name=theme-color]').setAttribute('content', this.darkMode ? '#2D2E32' : '#FFFFFF')
+      theme: 'system',
+      applyTheme: function () {
+        this.darkMode = this.theme === 'dark' || (this.theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        document.documentElement.classList.toggle('dark', this.darkMode)
+        document.querySelector('meta[name=theme-color]').setAttribute('content', this.darkMode ? '#16191d' : '#fafaf8')
       }
     }
-    blog.initDarkMode(localStorage.darkMode)
+    try {
+      var savedTheme = localStorage.getItem('theme')
+      var legacyTheme = localStorage.getItem('darkMode')
+      if (['system', 'light', 'dark'].indexOf(savedTheme) !== -1) blog.theme = savedTheme
+      else if (legacyTheme === 'true' || legacyTheme === 'false') blog.theme = legacyTheme === 'true' ? 'dark' : 'light'
+    } catch (e) { /* Storage may be unavailable in private or restricted contexts. */ }
+    blog.applyTheme()
   </script>
 </head>

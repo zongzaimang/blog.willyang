@@ -3,26 +3,34 @@
 {% include head.html -%}
 <body>
 {% include header.html -%}
-<div class="page page-post">
-  <h1 class="title" id="{{ page.title }}">{{ page.title }}</h1>
+<main id="main-content" class="site-shell" tabindex="-1">
+<article class="page page-post article-layout">
+  <header class="article-header">
+  <p class="eyebrow">{% if page.date %}文章 / Journal{% else %}{{ site.title | escape }}{% endif %}</p>
+  <h1 class="title" id="{{ page.title | escape }}">{{ page.title | escape }}</h1>
   {% if page.date %}
   <div class="subtitle">
-    <span>{{site.author}} 于 {{ page.date | date: "%Y-%m-%d" }} 发布</span>
+    <span>{{site.author}}</span>
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y年%m月%d日" }}</time>
+    {% for category in page.categories %}<a href="{{site.baseurl}}/pages/categories.html#{{ category | uri_escape }}">{{ category | escape }}</a>{% endfor %}
     {%- if site.extCount %}
       <span>浏览量</span>
       <span id="busuanzi_value_page_pv"></span>
     {% endif %}
   </div>
   {% endif %}
+  </header>
+  <nav class="toc" aria-label="文章目录" hidden><details><summary>本文目录</summary><ol></ol></details></nav>
   <div class="post">
-    {{ content }}
+    {{ content | reading_images }}
   </div>
   {% if site.extAdsense -%}
   <div class="adsense" style="overflow: hidden;">
     {% include ext-adsense.html -%}
   </div>
   {% endif %}
-</div>
+</article>
+</main>
 {% include footer.html -%}
 {% include script.html -%}
 </body>

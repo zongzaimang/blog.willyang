@@ -1,124 +1,49 @@
-.list-post > h2 {
-  font-size: 16px;
-  font-weight: bold;
-  padding: 12px 0;
+.page-index, .page-categories, .page-search { max-width: 58rem; margin-inline: auto; }
+.archive-summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-bottom: .85rem; border-bottom: 1px solid var(--border); color: var(--muted); font-size: .8125rem; }
+.archive-summary a { text-decoration: none; }
+.list-post { padding-block: 1.75rem .25rem; container: archive / inline-size; }
+.list-post > h2 { margin: 0 0 .5rem; font-size: 1.25rem; font-weight: 650; font-variant-numeric: tabular-nums; }
+.list-post ul { list-style: none; margin: 0; padding: 0; }
+.list-post li { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr) auto; align-items: baseline; gap: 1.2rem; padding: 1.1rem 0; border-bottom: 1px solid var(--border); }
+.list-post .date { color: var(--muted); font-size: .8125rem; font-variant-numeric: tabular-nums; }
+.list-post .title { min-width: 0; line-height: 1.65; overflow-wrap: anywhere; }
+.list-post .title a { color: var(--text); text-decoration: none; font-size: 1.0625rem; font-weight: 550; }
+.list-post .title a:hover { color: var(--accent); text-decoration: underline; }
+.list-post .categories { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: .35rem .7rem; max-width: 12rem; }
+.list-post .categories a { font-size: .8125rem; color: var(--muted); text-decoration: none; padding-block: .25rem; }
+.list-post .categories a:hover { color: var(--accent); text-decoration: underline; }
+.list-category { margin-bottom: 1rem; }
+.list-category h2 { font-size: 1rem; margin: 0 0 1rem; }
+.category-links { display: flex; flex-wrap: wrap; gap: .6rem; }
+.category-links a { display: inline-flex; align-items: center; min-height: 44px; padding: .45rem .85rem; gap: .6rem; background: var(--surface); border: 1px solid var(--border); border-radius: .5rem; font-size: .875rem; text-decoration: none; }
+.category-links a:hover { background: var(--accent-soft); border-color: var(--accent); }
+.category-links span { color: var(--muted); font-size: .75rem; }
+.page-search label { display: block; font-weight: 600; margin-bottom: .6rem; }
+#search-input { width: 100%; min-height: 52px; padding: .8rem 1rem; border: 1px solid var(--control-border); border-radius: .6rem; background: var(--surface); font-size: 1rem; }
+#search-input::placeholder { color: var(--muted); }
+.search-status { font-size: .875rem; color: var(--muted); margin-block: 1.1rem 2rem; }
+.list-search { padding: 0; margin: 0; list-style: none; }
+.list-search li { border-top: 1px solid var(--border); padding: 1.5rem 0; }
+.list-search a { display: block; text-decoration: none; overflow-wrap: anywhere; }
+.list-search .title { margin: 0 0 .5rem; font-size: 1.125rem; color: var(--text); font-weight: 600; }
+.list-search a:hover .title { color: var(--accent); text-decoration: underline; }
+.list-search .content { font-size: .9375rem; color: var(--muted); line-height: 1.8; margin: 0; }
+.list-search mark { background: var(--accent-soft); color: var(--accent); border-radius: 2px; }
+.search-retry { min-height: 44px; padding: .5rem 1rem; border: 1px solid var(--control-border); border-radius: .5rem; background: var(--surface); }
+@media (max-width: 767px) {
+  .list-post li { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .4rem .75rem; padding-block: 1.2rem; }
+  .list-post .title { grid-row: 1; grid-column: 1 / -1; }
+  .list-post .date { grid-row: 2; }
+  .list-post .categories { grid-row: 2; max-width: 100%; overflow-wrap: anywhere; }
 }
-.list-post ul {
-  box-sizing: border-box;
-  padding-left: 16px;
+/* rem follows the reading size: large text switches before titles get squeezed. */
+@container archive (max-width: 44rem) {
+  .list-post li { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: .4rem .75rem; padding-block: 1.2rem; }
+  .list-post .title { grid-row: 1; grid-column: 1 / -1; }
+  .list-post .date { grid-row: 2; }
+  .list-post .categories { grid-row: 2; max-width: 100%; overflow-wrap: anywhere; }
 }
-.list-post li {
-  display: flex;
-  align-items: center;
-  padding: 8px 0;
-}
-.list-post li .date {
-  color: #666666;
-  font-size: 16px;
-  flex-shrink: 0;
-  margin-right: 10px;
-}
-.list-post li .title {
-  width: 0;
-  flex-grow: 1;
-  padding: 4px 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.list-post li .title a {
-  font-size: 16px;
-}
-.list-post li .categories {
-  flex-shrink: 0;
-  padding: 4px 0;
-  margin-left: 10px;
-}
-.list-post li .categories a {
-  font-size: 14px;
-  color: #666666;
-  margin-left: 8px;
-}
-.list-category h2 {
-  font-size: 16px;
-  font-weight: bold;
-  padding: 12px 0;
-}
-.list-category div {
-  padding: 8px 0 8px 10px;
-}
-.list-category div a {
-  margin: 4px 6px;
-  white-space: nowrap;
-  font-size: 16px;
-  display: inline-block;
-  border-bottom: 1px solid #333333;
-}
-.page-search #search-input {
-  text-align: center;
-  font-size: 14px;
-  border: 1px solid #eaeaea;
-  width: 100%;
-  padding: 10px 0;
-  background-color: transparent;
-}
-.page-search h1 {
-  font-size: 16px;
-  height: 46px;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-}
-.page-search h1 i {
-  font-size: 20px;
-  margin-left: 6px;
-}
-.page-search .list-search li {
-  list-style: disc;
-  margin-left: 16px;
-  margin-bottom: 20px;
-}
-.page-search .list-search a {
-  display: block;
-  border-bottom: 1px dashed #ccc;
-}
-.page-search .list-search .title {
-  display: inline-block;
-  word-break: break-all;
-  font-size: 14px;
-  font-weight: bold;
-  padding-bottom: 1px;
-  border-bottom: 1px solid #999;
-}
-.page-search .list-search .content {
-  display: block;
-  font-size: 14px;
-  color: #5a5a5a;
-  word-break: break-all;
-  padding: 10px 0;
-}
-.page-search .list-search .hint {
-  font-size: inherit;
-  font-weight: bold;
-  color: #ff7f7f;
-}
-@media screen and (max-width: 560px) {
-  .list-post > h2 {
-    padding: 12px 0;
-  }
-  .list-post li {
-    padding: 8px 0;
-  }
-  .list-post li .title a {
-    font-size: 16px;
-  }
-  .list-post .categories {
-    display: none;
-  }
-  .list-category h2 {
-    padding: 12px 0;
-  }
-  .list-category div a {
-    font-size: 16px;
-  }
+@container archive (max-width: 18rem) {
+  .list-post li { grid-template-columns: minmax(0, 1fr); }
+  .list-post .categories { grid-row: 3; justify-content: flex-start; }
 }

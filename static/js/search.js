@@ -1,141 +1,79 @@
-// 加载所有文章数据，优先使用localStorage缓存
-function loadAllPostData(callback) {
-  if (localStorage.db && localStorage.dbVersion == blog.buildAt) {
-    document.querySelector('.page-search .icon-loading').style.opacity = 0
-    callback ? callback(localStorage.db) : ''
-    return
-  }
-
-  localStorage.removeItem('dbVersion')
-  localStorage.removeItem('db')
-
-  blog.ajax(
-    {
-      timeout: 20000,
-      url: blog.baseurl + '/static/xml/search.xml?t=' + blog.buildAt
-    },
-    function (data) {
-      document.querySelector('.page-search .icon-loading').style.opacity = 0
-      localStorage.db = data
-      localStorage.dbVersion = blog.buildAt
-      callback ? callback(data) : ''
-    },
-    function () {
-      console.error('全文检索数据加载失败...')
-      callback ? callback(null) : ''
-    }
-  )
-}
-
-// 搜索功能
+// A failed index still leaves title search available. Content is always rendered as text.
 blog.addLoadEvent(function () {
-  // 标题等信息
-  let titles = []
-  // 正文内容
+  const input = document.getElementById('search-input')
+  if (!input) return
+  const status = document.getElementById('search-status')
+  const retry = document.querySelector('.search-retry')
+  const rows = Array.from(document.querySelectorAll('.list-search li'))
+  const titles = rows.map(function (row) { return row.querySelector('.title').textContent })
   let contents = []
-  // 低版本chrome，输入拼音的过程中也会触发input事件
-  let inputLock = false
-  // 输入框
-  let input = document.getElementById('search-input')
+  let state = 'loading'
+  let composing = false
+  let timer
 
-  // 非搜索页面
-  if (!input) {
-    return
+  function marked(element, text, key) {
+    element.textContent = ''
+    const index = text.toLocaleLowerCase().indexOf(key.toLocaleLowerCase())
+    if (index < 0 || !key) { element.textContent = text; return }
+    element.appendChild(document.createTextNode(text.slice(0, index)))
+    const mark = document.createElement('mark')
+    mark.textContent = text.slice(index, index + key.length)
+    element.appendChild(mark)
+    element.appendChild(document.createTextNode(text.slice(index + key.length)))
   }
-
-  loadAllPostData(function (data) {
-    titles = parseTitle()
-    contents = parseContent(data)
-    search(input.value)
-  })
-
-  function parseTitle() {
-    let arr = []
-    let doms = document.querySelectorAll('.list-search .title')
-    for (let i = 0; i < doms.length; i++) {
-      arr.push(doms[i].innerHTML)
-    }
-    return arr
+  function search() {
+    const key = input.value.trim()
+    const needle = key.toLocaleLowerCase()
+    let count = 0
+    rows.forEach(function (row, index) {
+      const content = contents[index] || ''
+      const contentIndex = content.toLocaleLowerCase().indexOf(needle)
+      const match = key && (titles[index].toLocaleLowerCase().includes(needle) || contentIndex >= 0)
+      row.hidden = !match
+      if (!match) return
+      count++
+      marked(row.querySelector('.title'), titles[index], key)
+      const start = Math.max(0, contentIndex - 30)
+      const excerpt = (start ? '…' : '') + content.slice(start, start + Math.max(130, key.length + 40)) + (content.length > start + Math.max(130, key.length + 40) ? '…' : '')
+      marked(row.querySelector('.content'), excerpt, key)
+    })
+    const result = key ? (count ? '找到 ' + count + ' 篇相关文章。' : '没有找到相关文章，试试更短的关键词。') : '输入关键词，搜索标题与正文。'
+    status.textContent = state === 'loading' ? '正在加载全文索引，当前可搜索标题。' : state === 'error' ? '全文索引加载失败，当前仅搜索标题。' + (key ? result : '') : result
   }
-
-  function parseContent(data) {
-    let arr = []
-    let root = document.createElement('div')
-    root.innerHTML = data
-    let doms = root.querySelectorAll('li')
-    for (let i = 0; i < doms.length; i++) {
-      arr.push(doms[i].innerHTML)
-    }
-    return arr
+  async function load() {
+    state = 'loading'
+    retry.hidden = true
+    search()
+    const controller = new AbortController()
+    const timeout = setTimeout(function () { controller.abort() }, 20000)
+    try {
+      let data
+      try {
+        if (localStorage.getItem('dbVersion') === blog.buildAt) data = localStorage.getItem('db')
+      } catch (e) {}
+      if (!data) {
+        const response = await fetch(blog.baseurl + '/static/xml/search.xml?t=' + blog.buildAt, { signal: controller.signal })
+        if (!response.ok) throw new Error('Search index unavailable')
+        data = await response.text()
+      }
+      const root = new DOMParser().parseFromString(data, 'text/html')
+      const entries = Array.from(root.querySelectorAll('li'))
+      if (entries.length !== rows.length) throw new Error('Search index does not match the page')
+      contents = entries.map(function (entry) { return entry.textContent })
+      try { localStorage.setItem('db', data); localStorage.setItem('dbVersion', blog.buildAt) } catch (e) {}
+      state = 'ready'
+    } catch (e) {
+      state = 'error'
+      retry.hidden = false
+      try { localStorage.removeItem('dbVersion'); localStorage.removeItem('db') } catch (error) {}
+    } finally { clearTimeout(timeout); search() }
   }
-
-  function search(key) {
-    // <>& 替换
-    key = blog.trim(key)
-    key = key.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-
-    let doms = document.querySelectorAll('.list-search li')
-    let h1 = '<span class="hint">'
-    let h2 = '</span>'
-    for (let i = 0; i < doms.length; i++) {
-      let title = titles[i]
-      let content = contents[i]
-      let dom_li = doms[i]
-      let dom_title = dom_li.querySelector('.title')
-      let dom_content = dom_li.querySelector('.content')
-
-      dom_title.innerHTML = title
-      dom_content.innerHTML = ''
-
-      // 空字符隐藏
-      if (key == '') {
-        dom_li.setAttribute('hidden', true)
-        continue
-      }
-      let hide = true
-
-      // 搜索标题
-      const idx1 = title.toLowerCase().indexOf(key.toLowerCase())
-      if (idx1 != -1) {
-        hide = false
-        dom_title.innerHTML =  title.substring(0, idx1) + h1 + title.substring(idx1, idx1 + key.length) + h2 + title.substring(idx1 + key.length)
-      }
-
-      // 搜索内容
-      const idx2 = content.toLowerCase().indexOf(key.toLowerCase())
-      if (idx2 != -1) {
-        hide = false
-        const left = Math.max(idx2 - 20, 0)
-        const right = Math.min(left + Math.max(key.length, 100), content.length)
-        const newContent = content.substring(left, right)
-        const idx = newContent.toLowerCase().indexOf(key.toLowerCase())
-        const innerHTML = newContent.substring(0, idx) + h1 + newContent.substring(idx, idx + key.length) + h2 + newContent.substring(idx + key.length)
-        dom_content.innerHTML = innerHTML + '...'
-      }
-      // 内容未命中标题命中，内容直接展示前100个字符
-      if (idx1 !== -1 && idx2 == -1) {
-        dom_content.innerHTML = content.substring(0, 100) + '...'
-      }
-      if (hide) {
-        dom_li.setAttribute('hidden', true)
-      } else {
-        dom_li.removeAttribute('hidden')
-      }
-    }
-  }
-
-  blog.addEvent(input, 'input', function (event) {
-    if (!inputLock) {
-      search(event.target.value)
-    }
+  input.addEventListener('input', function () {
+    clearTimeout(timer)
+    if (!composing) timer = setTimeout(search, 120)
   })
-
-  blog.addEvent(input, 'compositionstart', function (event) {
-    inputLock = true
-  })
-
-  blog.addEvent(input, 'compositionend', function (event) {
-    inputLock = false
-    search(event.target.value)
-  })
+  input.addEventListener('compositionstart', function () { composing = true; clearTimeout(timer) })
+  input.addEventListener('compositionend', function () { composing = false; search() })
+  retry.addEventListener('click', load)
+  load()
 })

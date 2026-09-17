@@ -122,3 +122,28 @@ url_history:
 
 [xxx.zip 下载](/posts/2019/05/01/xxx.zip)
 ```
+
+## 视觉设计与验收
+
+页面采用系统字体、独立的正文阅读宽度和浅深色语义配色。`static/css/common.css` 定义通用颜色、间距和导航，`theme-dark.css` 定义深色变量，`page.css` 与 `post.css` 分别管理列表和文章页面。外观选择位于页头，支持跟随系统、浅色和深色；手动偏好不会被系统变化覆盖。
+
+文章目录在至少有三个一至三级标题时生成：宽屏使用侧栏，小屏使用可展开目录。文章列表使用内容区查询适配文字放大；返回顶部位于页尾，不覆盖正文。代码块和表格可独立滚动；图片预览支持键盘操作、Esc 关闭和长图展开。`reading_images` 过滤器为后续图片增加延迟加载，同时保留作者指定的加载方式和尺寸。远程图片的尺寸应在内容中明确填写；构建不会请求第三方图片或推测其尺寸。
+
+运行构建和 Ruby 回归检查：
+
+```sh
+bundle exec jekyll build
+bundle exec ruby _tests/short_post_urls_test.rb
+bundle exec ruby _tests/reading_images_test.rb
+```
+
+浏览器验收需要可用的 Playwright 包和 Chrome 或 Edge。先将 `_site` 通过本地 HTTP 服务运行在 4173 端口，再执行：
+
+```sh
+node _tests/visual_design_test.cjs
+node _tests/adversarial_visual_test.cjs
+```
+
+可用环境变量：`DESIGN_BASE_URL` 修改预览地址、`BROWSER_CHANNEL` 选择 `chrome` 或 `msedge`（默认）、`DESIGN_OUTPUT` 修改截图及结果目录（默认 `.bundle/design-review`，不会发布）。脚本检查全部当前文章和主要页面的七种宽度、两种主题，以及搜索成功/失败/重试、主题偏好、菜单、图片键盘操作、减少动效和文字放大。布局矩阵隔离第三方网络媒体；远程图片可用性需另行检查。自动化检查不等同于完整的 WCAG 人工审核或真机验证。
+
+`adversarial_visual_test.cjs` 额外覆盖 100%/200% 文字尺寸下的标题有效宽度、分类链接点击命中、页尾返回顶部、全部语法 token 在普通/高亮行背景下的对比度、页头主题偏好和统一图标。结果位于 `.bundle/adversarial-fixed/<浏览器名称>`。

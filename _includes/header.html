@@ -1,19 +1,20 @@
+<a class="skip-link" href="#main-content">跳转到主要内容</a>
 <header class="header">
-  <a href="{{ site.baseurl }}/" class="logo"></a>
-  <nav class="menu">
-    {% for menu in site.menu -%}
-
-      {%- assign target = "" %}
-      {%- if menu.target %}
-        {% capture target %}target="{{ menu.target }}"{% endcapture %}
-      {%- endif %}
-
-      {%- assign href = menu.url %}
-      {%- unless href contains "://" %}
-        {% capture href %}{{ site.baseurl }}{{ menu.url }}{% endcapture %}
-      {%- endunless -%}
-
-      <a href="{{href}}" {{target}} class="hover-underline">{{ menu.title }}</a>
-    {% endfor -%}
+  <a href="{{ site.baseurl }}/" class="brand" aria-label="{{ site.title | escape }} 首页">
+    <span class="brand-mark" aria-hidden="true"></span>
+  </a>
+  <div class="theme-control" hidden>
+    <label for="theme-select" class="sr-only">外观</label>
+    <select id="theme-select" aria-label="选择外观主题">
+      <option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">深色</option>
+    </select>
+  </div>
+  <button class="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="false">菜单 <span aria-hidden="true">☰</span></button>
+  <nav class="menu" id="site-menu" aria-label="主导航">
+    {% for menu in site.menu %}
+      {% assign href = menu.url %}
+      {% unless href contains '://' %}{% assign href = site.baseurl | append: menu.url %}{% endunless %}
+      <a href="{{href}}"{% if menu.target %} target="{{menu.target}}" rel="noopener noreferrer"{% endif %}{% if page.url == menu.url %} aria-current="page"{% endif %}>{{ menu.title | escape }}</a>
+    {% endfor %}
   </nav>
 </header>

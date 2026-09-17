@@ -3,6 +3,12 @@ layout: page
 title: 首页
 ---
 <div class="page page-index">
+  <header class="page-heading">
+    <p class="eyebrow">Journal / 文章归档</p>
+    <h1>记录与分享</h1>
+    <p class="page-description">{{ site.description | escape }}</p>
+  </header>
+  <div class="archive-summary"><span>共 {{ site.posts.size }} 篇文章</span><a href="{{site.baseurl}}/pages/categories.html">按分类浏览 ↗</a></div>
   {% for post in site.posts  -%}
     {%- capture post_year %}{{ post.date | date: "%Y" }}{% endcapture -%}
     {%- capture post_previous_year %}{{ post.previous.date | date: "%Y" }}{% endcapture -%}
@@ -13,13 +19,13 @@ title: 首页
       <ul>
     {%- endif %}
         <li>
-          <span class="date">{{ post.date | date: "%Y/%m/%d" }}</span>
+          <time class="date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y/%m/%d" }}</time>
           <div class="title">
-            <a href="{{ site.baseurl | append: post.url }}" class="hover-underline">{{ post.title }}</a>
+            <a href="{{ site.baseurl | append: post.url }}">{{ post.title | escape }}</a>
           </div>
           <div class="categories">
             {% for categorie in post.categories -%}
-            <a href="{{site.baseurl}}/pages/categories.html#{{ categorie }}" class="hover-underline">{{ categorie }}</a>
+            <a href="{{site.baseurl}}/pages/categories.html#{{ categorie | uri_escape }}">{{ categorie | escape }}</a>
             {%- endfor %}
           </div>
         </li>

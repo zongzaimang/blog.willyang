@@ -2,21 +2,16 @@
 layout: page
 title: 搜索
 ---
-
 <div class="page page-search">
-  <input id="search-input" type="text" placeholder="请在这里输入关键词^_^"></input>
-  <h1>
-    <span>搜索结果</span>
-    <i class="svg-icon icon-loading"></i>
-  </h1>
-  <ul class="list-search">
-    {%- for post in site.posts  %}
-    <li hidden>
-      <a href="{{site.baseurl}}{{ post.url }}">
-        <p class="title">{{ post.title }}</p>
-        <p class="content"></p>
-      </a>
-    </li>
-    {%- endfor %}
+  <header class="page-heading"><p class="eyebrow">Search / 搜索</p><h1>寻找一篇文章</h1><p class="page-description">搜索文章标题与正文。</p></header>
+  <label for="search-input">关键词</label>
+  <input id="search-input" type="search" placeholder="输入关键词，例如：设计、Apple、网络" autocomplete="off" aria-describedby="search-status" />
+  <p id="search-status" class="search-status" role="status" aria-live="polite">正在加载搜索索引…</p>
+  <button class="search-retry" type="button" hidden>重新加载</button>
+  <noscript><p>全文搜索需要 JavaScript。你也可以<a href="{{site.baseurl}}/pages/categories.html">按分类浏览文章</a>。</p></noscript>
+  <ul class="list-search" aria-label="搜索结果">
+    {% for post in site.posts %}
+    <li hidden><a href="{{site.baseurl}}{{post.url}}"><h2 class="title">{{post.title | escape}}</h2><p class="content"></p></a></li>
+    {% endfor %}
   </ul>
 </div>

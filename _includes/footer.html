@@ -1,15 +1,8 @@
 <footer class="footer">
-  <span>{{ site.footerText }}</span>
-  <a href="{{ site.baseurl }}/static/xml/rss.xml">RSS订阅</a>
-
-  {%- if site.extCount %}
-    <span>总访问量</span>
-    <span id="busuanzi_value_site_pv"></span>
-  {% endif %}
-  <div class="footer-btn theme-toggler hide">
-    <i class="svg-icon icon-theme-light"></i>
+  <div class="footer-info">
+    <span>{{ site.footerText }}</span>
+    <a href="{{ site.baseurl }}/static/xml/rss.xml">RSS 订阅</a>
+    {% if site.extCount %}<span>总访问量 <span id="busuanzi_value_site_pv"></span></span>{% endif %}
   </div>
-  <div class="footer-btn to-top">
-    <i class="svg-icon icon-arrow-top"></i>
-  </div>
+  <a class="to-top" href="#main-content">返回顶部 <span aria-hidden="true">↑</span></a>
 </footer>
