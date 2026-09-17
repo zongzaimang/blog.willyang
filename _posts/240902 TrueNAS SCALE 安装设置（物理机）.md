@@ -1,4 +1,9 @@
 ---
+url_suffix: 2
+url_history:
+  - "/240902-2/"
+  - "/posts/2024/09/02/TrueNAS-SCALE-%E5%AE%89%E8%A3%85%E8%AE%BE%E7%BD%AE-%E7%89%A9%E7%90%86%E6%9C%BA.html"
+  - "/240902b/"
 layout: mypost
 title: TrueNAS SCALE 安装设置（物理机）
 categories: [TrueNAS]

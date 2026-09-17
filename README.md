@@ -91,21 +91,34 @@ rougify style github > highlighting.css
 
 # 使用
 
-文章放在`_posts`目录下，命名为`yyyy-MM-dd-xxxx-xxxx.md`，内容格式如下
+文章放在`_posts`目录下，命名为`YYMMDD 标题.md`，日期与标题之间使用一个半角空格，例如 `150101 主题预览.md`、`251229 Spotify PWA.md`。保留 `.md` 扩展名，内容格式如下
 
 ```yaml
 ---
 layout: mypost
 title: 标题
 categories: [分类1, 分类2]
+url_suffix: 1
+url_history:
+  - /150101-1/
 ---
 文章内容，Markdown格式
 ```
 
-文章资源放在`posts`目录，如文章文件名是`2019-05-01-theme-usage.md`，则该篇文章的资源需要放在`posts/2019/05/01`下，在文章使用时直接引用即可。当然了，写作的时候会提示资源不存在忽略即可
+`_plugins/compact_post_names.rb` 负责识别短日期文件名：`YY` 表示 2000–2099 年，`150101` 表示 2015 年 1 月 1 日。日期必须有效；显式填写的 front matter `date`、`title`、`slug` 仍按 Jekyll 规则生效。旧的 `YYYY-MM-DD-title.md` 格式也兼容。
+
+启用 `short_post_urls` 后，网址为 `/文件名六位日期-url_suffix/`，例如 `240910 机场推荐.md` 配合 `url_suffix: 1` 生成 `/240910-1/`。网址只读取文件名日期，不读取 front matter 的发布日期；修改标题不会改变网址，修改文件名日期会改变网址。无需填写 `permalink`，插件会生成它。
+
+同日期的文章分别填写固定的 `1、2、3……`（正整数，不使用前导零），已有后缀不自动重排。新增文章或改日期时选择未占用的后缀；与文章、普通页面、静态文件或历史跳转地址冲突时构建会失败。
+
+`url_history` 保存这篇文章使用过的地址（含当前地址）。改日期或后缀前保留旧地址，发布新地址时把它追加到列表中，不删除旧记录。构建只读取这些记录，不修改文章源文件；未记录的历史地址无法自动恢复。历史地址生成静态跳转页，直接指向当前地址，并保留浏览器查询参数与锚点；GitHub Pages 上这不是 HTTP 301。删除文章后若需要继续保留链接，应保留单独的跳转页。
+
+本地运行和 GitHub Actions 构建都会加载这些插件；不要使用 `--safe`，也不要切换为 GitHub Pages 内置的分支构建。修改插件后需要重启本地预览。可运行 `bundle exec ruby _tests/short_post_urls_test.rb` 验证文件名、短链接及冲突检查。
+
+文章资源仍可放在 `posts/2019/05/01` 等原有目录。短网址改变了页面层级，图片和附件请使用以 `/` 开头的站内绝对路径，不要依赖文章网址所在目录。
 
 ```md
-![这是图片](xxx.png)
+![这是图片](/posts/2019/05/01/xxx.png)
 
-[xxx.zip 下载](xxx.zip)
+[xxx.zip 下载](/posts/2019/05/01/xxx.zip)
 ```

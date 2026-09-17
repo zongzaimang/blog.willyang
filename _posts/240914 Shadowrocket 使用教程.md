@@ -1,4 +1,9 @@
 ---
+url_suffix: 1
+url_history:
+  - "/240914-1/"
+  - "/posts/2024/09/14/Shadowrocket-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.html"
+  - "/240914a/"
 layout: mypost
 title: Shadowrocket 使用教程
 categories:

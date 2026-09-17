@@ -1,4 +1,9 @@
 ---
+url_suffix: 1
+url_history:
+  - "/220515-1/"
+  - "/posts/2022/05/15/virtualbox-network.html"
+  - "/220515a/"
 layout: mypost
 title: VirtualBox网路配置
 categories: [小技巧]
@@ -10,13 +15,13 @@ categories: [小技巧]
 
 [Introduction to Networking Modes](https://www.virtualbox.org/manual/ch06.html)
 
-![network](network.png)
+![network](/posts/2022/05/15/network.png)
 
 ## 端口转发
 
 一般用于 NAT 模式，把部分端口暴露在宿主机上
 
-![port-forward](port-forward.png)
+![port-forward](/posts/2022/05/15/port-forward.png)
 
 ## Host-only
 
@@ -45,19 +50,19 @@ enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 ```
 
-![host-only-1](host-only-1.png)
+![host-only-1](/posts/2022/05/15/host-only-1.png)
 
-![host-only-2](host-only-2.png)
+![host-only-2](/posts/2022/05/15/host-only-2.png)
 
-![host-only-3](host-only-3.png)
+![host-only-3](/posts/2022/05/15/host-only-3.png)
 
 ## Bridged
 
 桥接模式，这种模式网络功能支持的最好。可以桥接到真实的网卡，但是没网的话就不行了，所以推荐在本地创建一个虚拟网卡
 
-![virtual-net](virtual-net.png)
+![virtual-net](/posts/2022/05/15/virtual-net.png)
 
-![config-net](config-net.png)
+![config-net](/posts/2022/05/15/config-net.png)
 
 ```
 以太网适配器 VBOX Bridge:
@@ -69,7 +74,7 @@ enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
    默认网关. . . . . . . . . . . . . : 0.0.0.0
 ```
 
-![bridge-1](bridge-1.png)
+![bridge-1](/posts/2022/05/15/bridge-1.png)
 
 在桥接模式下，桥接到真实网卡时（比如 WIFI 网卡），由于路由器自带 DHCP，虚拟机可以分配到 IP 地址。桥接到虚拟网卡时，由于没有 DHCP 服务器，虚拟机会分配不到到 IP 地址
 
@@ -144,4 +149,4 @@ enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 
 需要注意的是规则有匹配顺序，如果配置规则后仍无法访问，可能是被另一条规则给拦住了
 
-![firewall](firewall.png)
+![firewall](/posts/2022/05/15/firewall.png)

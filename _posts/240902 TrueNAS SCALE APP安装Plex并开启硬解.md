@@ -1,4 +1,9 @@
 ---
+url_suffix: 1
+url_history:
+  - "/240902-1/"
+  - "/posts/2024/09/02/TrueNAS-SCALE-APP%E5%AE%89%E8%A3%85Plex%E5%B9%B6%E5%BC%80%E5%90%AF%E7%A1%AC%E8%A7%A3.html"
+  - "/240902a/"
 layout: mypost
 title: TrueNAS SCALE APP安装Plex并开启硬解
 categories: [TrueNAS]

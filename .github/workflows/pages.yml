@@ -29,6 +29,9 @@ jobs:
           ruby-version: '3.1'
           bundler-cache: true
 
+      - name: Test post filename compatibility
+        run: bundle exec ruby _tests/short_post_urls_test.rb
+
       - name: Build Jekyll site
         run: bundle exec jekyll build --destination _site
 

@@ -1,4 +1,9 @@
 ---
+url_suffix: 3
+url_history:
+  - "/251110-3/"
+  - "/posts/2025/11/10/Sing-Box-iOS-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html"
+  - "/251110c/"
 layout: mypost
 title: Sing-Box iOS 使用教程、配置说明
 categories:
@@ -10,7 +15,7 @@ Sing-Box是强大的网络代理翻墙工具，本文我们将提供详细的Sin
 
 在 App Store 下载安装 APP，然后启动。
 
-SingBox客户端需要有代理订阅才能实现翻墙功能，如果还没有购买，可以参考[机场推荐](https://blog.willyang.space/posts/2024/09/10/%E6%9C%BA%E5%9C%BA%E6%8E%A8%E8%8D%90.html)。
+SingBox客户端需要有代理订阅才能实现翻墙功能，如果还没有购买，可以参考[机场推荐](/240910-1/)。
 
 如果你的机场不支持Sing-Box订阅格式，可以使用[在线订阅转换工具](https://findladders.com/sub-converters/)进行转换。
 

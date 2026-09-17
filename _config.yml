@@ -8,10 +8,11 @@ title: WillYang Blog
 description: Will Yang 的个人博客
 keywords: WillYang,Blog,Java,Html,JavaScript
 author: Will Yang
-footerText: '©2024 Will Yang. All Rights Reserved'
+footerText: '©2026 Will Yang. All Rights Reserved'
 
 # 这些不要动
 permalink: /posts/:year/:month/:day/:title.html
+short_post_urls: true
 kramdown:
   auto_ids: true
   input: GFM

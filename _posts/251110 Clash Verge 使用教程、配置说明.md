@@ -1,4 +1,9 @@
 ---
+url_suffix: 2
+url_history:
+  - "/251110-2/"
+  - "/posts/2025/11/10/Clash-Verge-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html"
+  - "/251110b/"
 layout: mypost
 title: Clash Verge 使用教程、配置说明
 categories:
@@ -23,7 +28,7 @@ categories:
 
 按照提示完成安装。安装完成后，可在设置中将界面语言切换为中文。
 
-PS: Clash Verge 只是客户端，需要配合代理节点一起使用，如果还没有购买代理服务，可以参考[机场推荐](https://blog.willyang.space/posts/2024/09/10/%E6%9C%BA%E5%9C%BA%E6%8E%A8%E8%8D%90.html)。
+PS: Clash Verge 只是客户端，需要配合代理节点一起使用，如果还没有购买代理服务，可以参考[机场推荐](/240910-1/)。
 
 ## **配置代理**
 

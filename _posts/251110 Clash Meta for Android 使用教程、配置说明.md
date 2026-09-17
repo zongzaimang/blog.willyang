@@ -1,4 +1,9 @@
 ---
+url_suffix: 1
+url_history:
+  - "/251110-1/"
+  - "/posts/2025/11/10/Clash-Meta-for-Android-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B-%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E.html"
+  - "/251110a/"
 layout: mypost
 title: Clash Meta for Android 使用教程、配置说明
 categories:
@@ -6,7 +11,7 @@ categories:
 ---
 本文是 Clash Meta for Android 的使用教程文章，包括下载、配置、使用的全部教程。CMFA 是基于Clash Meta/Mihomo内核的网络代理软件，支持常见的网络代理协议。
 
-使用 Clash Meta for Android 前，需要先购买机场订阅，如果还没有，可以参考[机场推荐](https://blog.willyang.space/posts/2024/09/10/%E6%9C%BA%E5%9C%BA%E6%8E%A8%E8%8D%90.html)购买。
+使用 Clash Meta for Android 前，需要先购买机场订阅，如果还没有，可以参考[机场推荐](/240910-1/)购买。
 
 ## Clash Meta for Android 下载安装
 

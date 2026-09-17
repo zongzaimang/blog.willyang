@@ -1,4 +1,9 @@
 ---
+url_suffix: 1
+url_history:
+  - "/251229-1/"
+  - "/posts/2025/12/29/Spotify-PWA.html"
+  - "/251229a/"
 layout: mypost
 title: Spotify PWA
 categories:
