@@ -21,6 +21,14 @@ const output = process.env.DESIGN_OUTPUT || '.bundle/design-review';
   await page.goto(base);
   const posts=await page.locator('.list-post .title a').evaluateAll(as=>as.map(a=>a.pathname));
   const paths=['/','/pages/categories.html','/pages/search.html','/pages/about.html','/pages/links.html','/pages/chat.html','/404.html',...posts];
+  const currentNavigation = new Map([
+    ['/','首页'],
+    ['/pages/categories.html','归类'],
+    ['/pages/search.html','搜索'],
+    ['/pages/about.html','关于'],
+    ['/pages/links.html','友链'],
+    ['/pages/chat.html','留言']
+  ]);
   const problems=[];
   let layouts=0;
   for(const width of [320,375,390,768,1024,1440,1920]) {
@@ -29,6 +37,9 @@ const output = process.env.DESIGN_OUTPUT || '.bundle/design-review';
       await page.evaluate(theme=>localStorage.setItem('theme',theme),theme);
       for(const path of paths) {
         await page.goto(base+path,{waitUntil:'domcontentloaded'});
+        const currentItems = await page.locator('#site-menu [aria-current="page"]').allTextContents();
+        const expectedCurrent = currentNavigation.has(path) ? [currentNavigation.get(path)] : [];
+        assert.deepEqual(currentItems, expectedCurrent, `Current navigation mismatch at ${path}`);
         const result=await page.evaluate(()=>({
           overflow:document.documentElement.scrollWidth > innerWidth+1,
           main:document.querySelectorAll('main').length,

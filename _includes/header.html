@@ -14,7 +14,8 @@
     {% for menu in site.menu %}
       {% assign href = menu.url %}
       {% unless href contains '://' %}{% assign href = site.baseurl | append: menu.url %}{% endunless %}
-      <a href="{{href}}"{% if menu.target %} target="{{menu.target}}" rel="noopener noreferrer"{% endif %}{% if page.url == menu.url %} aria-current="page"{% endif %}>{{ menu.title | escape }}</a>
+      {% assign menu_current_url = menu.url | remove: '.html' %}
+      <a href="{{href}}"{% if menu.target %} target="{{menu.target}}" rel="noopener noreferrer"{% endif %}{% if page.url == menu_current_url %} aria-current="page"{% endif %}>{{ menu.title | escape }}</a>
     {% endfor %}
   </nav>
 </header>
