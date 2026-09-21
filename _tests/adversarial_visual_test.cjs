@@ -9,6 +9,10 @@ const output = '.bundle/adversarial-fixed/' + channel;
   fs.mkdirSync(output, {recursive:true});
   const browser = await chromium.launch({channel,headless:true});
   const page = await browser.newPage();
+  const setTheme = theme => page.evaluate(value => {
+    if (value === 'system') localStorage.removeItem('theme'); else localStorage.setItem('theme', value);
+    window.dispatchEvent(new StorageEvent('storage',{key:'theme',newValue:value === 'system' ? null : value}));
+  },theme);
   await page.route('**/*', route => new URL(route.request().url()).origin === new URL(base).origin ? route.continue() : route.abort());
   const errors=[];
   page.on('pageerror', e=>errors.push({url:page.url(),message:e.message}));
@@ -21,7 +25,7 @@ const output = '.bundle/adversarial-fixed/' + channel;
       overflow:document.documentElement.scrollWidth>innerWidth+1,
       titleWidth:Math.min(...Array.from(document.querySelectorAll('.list-post .title')).map(e=>e.getBoundingClientRect().width)),
       header:document.querySelector('.header').getBoundingClientRect().toJSON(),
-      theme:document.querySelector('#theme-select').getBoundingClientRect().toJSON()
+      theme:document.querySelector('.theme-toggle').getBoundingClientRect().toJSON()
     }));
     assert.equal(metrics.overflow,false,JSON.stringify({width,size,metrics}));
     assert.ok(metrics.titleWidth>=240,JSON.stringify({width,size,metrics}));
@@ -37,9 +41,10 @@ const output = '.bundle/adversarial-fixed/' + channel;
   // Opening the disclosure must place the links next in natural keyboard order.
   await page.locator('.menu-toggle').focus();
   await page.keyboard.press('Enter');
-  await page.keyboard.press('Tab');
   assert.equal(await page.locator('#site-menu a').first().evaluate(e=>e===document.activeElement),true);
   await page.keyboard.press('Escape');
+  const controlSizes=await page.locator('.theme-toggle, .menu-toggle').evaluateAll(es=>es.map(e=>({width:e.getBoundingClientRect().width,height:e.getBoundingClientRect().height,icon:getComputedStyle(e.querySelector('svg')).width})));
+  assert.deepEqual(controlSizes,[{width:44,height:44,icon:'21px'},{width:44,height:44,icon:'21px'}]);
   await page.emulateMedia({reducedMotion:'reduce'});
   await page.evaluate(()=>{const a=Array.from(document.querySelectorAll('.categories a')).at(-1),r=a.getBoundingClientRect();scrollTo(0,r.top+scrollY+r.height/2-(innerHeight-38))});
   await page.waitForTimeout(50);
@@ -61,7 +66,7 @@ const output = '.bundle/adversarial-fixed/' + channel;
   },tokens);
   const contrasts=[];
   for (const theme of ['light','dark']) {
-    await page.locator('#theme-select').selectOption(theme);
+    await setTheme(theme);
     const values=await page.locator('#all-token-fixture span').evaluateAll(elements=>{
       const rgb=s=>(s.match(/[\d.]+/g)||[]).map(Number);
       const lum=c=>c.slice(0,3).map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4}).reduce((sum,v,i)=>sum+v*[.2126,.7152,.0722][i],0);
@@ -78,16 +83,24 @@ const output = '.bundle/adversarial-fixed/' + channel;
   }
   for (const width of [320,390,768,1440]) for (const theme of ['light','dark']) {
     await page.setViewportSize({width,height:900});await page.goto(base);
-    await page.locator('#theme-select').selectOption(theme);
+    await setTheme(theme);
     await page.locator('.header').screenshot({path:output+`/header-${width}-${theme}.png`});
   }
-  assert.equal(await page.locator('.footer #theme-select').count(),0);
+  assert.equal(await page.locator('.footer .theme-toggle').count(),0);
   const icons=await page.locator('link[rel="icon"], link[rel="apple-touch-icon"]').evaluateAll(es=>es.map(e=>e.href));
-  assert.equal(icons.length,2);assert.ok(icons.every(url=>url===base+'/static/img/wy-logo-blue.png'));
-  const image=await page.request.get(icons[0]);assert.equal(image.status(),200);assert.equal((await image.body()).readUInt32BE(0),0x89504e47);
-  await page.locator('#theme-select').selectOption('light');await page.emulateMedia({colorScheme:'dark'});await page.reload();
-  assert.equal(await page.locator('#theme-select').inputValue(),'light');assert.equal(await page.locator('html').evaluate(e=>e.classList.contains('dark')),false);
-  await page.locator('#theme-select').selectOption('system');assert.equal(await page.locator('html').evaluate(e=>e.classList.contains('dark')),true);
+  assert.deepEqual(icons,[
+    base+'/static/img/wy-logo.svg',
+    base+'/static/img/wy-logo-32.png',
+    base+'/static/img/wy-logo-180.png'
+  ]);
+  const iconResponses=await Promise.all(icons.map(url=>page.request.get(url)));
+  assert.ok(iconResponses.every(response=>response.status()===200));
+  assert.match(await iconResponses[0].text(),/<svg\b/);
+  assert.equal((await iconResponses[1].body()).readUInt32BE(0),0x89504e47);
+  assert.equal((await iconResponses[2].body()).readUInt32BE(0),0x89504e47);
+  await setTheme('light');await page.emulateMedia({colorScheme:'dark'});await page.reload();
+  assert.equal(await page.locator('.theme-toggle').getAttribute('data-theme'),'light');assert.equal(await page.locator('html').evaluate(e=>e.classList.contains('dark')),false);
+  await setTheme('system');assert.equal(await page.locator('html').evaluate(e=>e.classList.contains('dark')),true);
   assert.deepEqual(errors,[]);
   const result={channel,layouts,contrasts,categoryHit:'passed',returnToTop:'passed',themeHeader:'passed',themePersistence:'passed',icons:'passed',errors};
   fs.writeFileSync(output+'/results.json',JSON.stringify(result,null,2));console.log(JSON.stringify(result));await browser.close();

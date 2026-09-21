@@ -77,7 +77,7 @@ rougify style github > highlighting.css
 
 5. 清空`posts`和`_posts`目录下所有文件，注意是清空，不是删除这两个目录
 
-6. 网站的 logo 和 favicon 放在了`static/img/`下，替换即可，大小无所谓，图片比例最好是 1:1
+6. 网站的 logo 源文件为 `static/img/wy-logo.svg`；修改标志后，从该 SVG 重新生成各尺寸 PNG 和 ICO 兼容文件
 
 7. 如果你是把项目 fork 过去的，想要删除我的提交记录可以使用下面的命令
 
@@ -147,3 +147,5 @@ node _tests/adversarial_visual_test.cjs
 可用环境变量：`DESIGN_BASE_URL` 修改预览地址、`BROWSER_CHANNEL` 选择 `chrome` 或 `msedge`（默认）、`DESIGN_OUTPUT` 修改截图及结果目录（默认 `.bundle/design-review`，不会发布）。脚本检查全部当前文章和主要页面的七种宽度、两种主题，以及搜索成功/失败/重试、主题偏好、菜单、图片键盘操作、减少动效和文字放大。布局矩阵隔离第三方网络媒体；远程图片可用性需另行检查。自动化检查不等同于完整的 WCAG 人工审核或真机验证。
 
 `adversarial_visual_test.cjs` 额外覆盖 100%/200% 文字尺寸下的标题有效宽度、分类链接点击命中、页尾返回顶部、全部语法 token 在普通/高亮行背景下的对比度、页头主题偏好和统一图标。结果位于 `.bundle/adversarial-fixed/<浏览器名称>`。
+
+品牌标志源文件为 `static/img/wy-logo.svg`。导航栏和现代浏览器图标使用 SVG；`wy-logo-32.png`、`wy-logo-180.png`、`wy-logo-512.png` 分别用于浏览器兼容、Apple 主屏和第三方友链头像。PNG/ICO 应从 SVG 渲染，避免从旧位图反复缩放。

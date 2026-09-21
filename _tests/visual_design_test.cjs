@@ -13,6 +13,10 @@ const output = process.env.DESIGN_OUTPUT || '.bundle/design-review';
   const context = await browser.newContext({viewport:{width:1440,height:1000}});
   await context.route('**/*', route => new URL(route.request().url()).origin === new URL(base).origin ? route.continue() : route.abort());
   const page = await context.newPage();
+  const setTheme = theme => page.evaluate(value => {
+    if (value === 'system') localStorage.removeItem('theme'); else localStorage.setItem('theme', value);
+    window.dispatchEvent(new StorageEvent('storage',{key:'theme',newValue:value === 'system' ? null : value}));
+  },theme);
   const errors=[];
   page.on('pageerror',e=>errors.push({page:page.url(),message:e.message,stack:e.stack}));
   page.on('requestfailed',request=>{
@@ -55,15 +59,16 @@ const output = process.env.DESIGN_OUTPUT || '.bundle/design-review';
   assert.deepEqual(problems,[], 'Layout regressions: '+JSON.stringify(problems));
   // Manual preference persists across system changes and reloads.
   await page.goto(base);
-  await page.locator('#theme-select').selectOption('light');
+  await setTheme('light');
   await page.emulateMedia({colorScheme:'dark'});
   assert.equal(await page.locator('html').evaluate(el=>el.classList.contains('dark')),false);
   await page.reload();
-  assert.equal(await page.locator('#theme-select').inputValue(),'light');
-  await page.locator('#theme-select').selectOption('system');
+  assert.equal(await page.locator('.theme-toggle').getAttribute('data-theme'),'light');
+  await setTheme('system');
   assert.equal(await page.locator('html').evaluate(el=>el.classList.contains('dark')),true);
   await page.emulateMedia({colorScheme:'light'});
   await page.waitForFunction(()=>!document.documentElement.classList.contains('dark'));
+  assert.equal(await page.locator('.theme-toggle').getAttribute('data-theme'),'light');
   // Mobile menu and keyboard dismissal.
   await page.setViewportSize({width:390,height:844});
   const menu=page.locator('#site-menu');

@@ -239,10 +239,12 @@ blog.addLoadEvent(function () {
   const button = document.querySelector('.menu-toggle')
   const menu = document.querySelector('.menu')
   if (button && menu) {
-    function closeMenu() { menu.classList.remove('is-open'); button.setAttribute('aria-expanded', 'false') }
-    button.addEventListener('click', function () {
+    function closeMenu() { menu.classList.remove('is-open'); button.setAttribute('aria-expanded', 'false'); button.setAttribute('aria-label', '打开导航菜单') }
+    button.addEventListener('click', function (event) {
       const open = menu.classList.toggle('is-open')
       button.setAttribute('aria-expanded', String(open))
+      button.setAttribute('aria-label', open ? '关闭导航菜单' : '打开导航菜单')
+      if (open && event.detail === 0) menu.querySelector('a').focus()
     })
     menu.addEventListener('keydown', function (event) {
       if (event.key === 'Escape') { closeMenu(); button.focus() }
@@ -255,23 +257,31 @@ blog.addLoadEvent(function () {
     document.documentElement.classList.add('js')
   }
 
-  const select = document.getElementById('theme-select')
-  if (select) {
-    select.value = blog.theme
-    select.parentElement.hidden = false
-    select.addEventListener('change', function () {
-      blog.theme = select.value
+  const themeButton = document.querySelector('.theme-toggle')
+  if (themeButton) {
+    function syncThemeButton() {
+      const dark = document.documentElement.classList.contains('dark')
+      themeButton.dataset.theme = dark ? 'dark' : 'light'
+      themeButton.setAttribute('aria-pressed', String(dark))
+      themeButton.setAttribute('aria-label', dark ? '切换为浅色模式' : '切换为深色模式')
+      themeButton.title = dark ? '切换为浅色模式' : '切换为深色模式'
+    }
+    syncThemeButton()
+    themeButton.hidden = false
+    themeButton.addEventListener('click', function () {
+      blog.theme = document.documentElement.classList.contains('dark') ? 'light' : 'dark'
       try { localStorage.setItem('theme', blog.theme) } catch (e) {}
       blog.applyTheme()
+      syncThemeButton()
     })
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
-      if (blog.theme === 'system') blog.applyTheme()
+      if (blog.theme === 'system') { blog.applyTheme(); syncThemeButton() }
     })
     window.addEventListener('storage', function (event) {
       if (event.key !== 'theme') return
       blog.theme = ['light', 'dark'].includes(event.newValue) ? event.newValue : 'system'
-      select.value = blog.theme
       blog.applyTheme()
+      syncThemeButton()
     })
   }
   const topButton = document.querySelector('.to-top')
