@@ -1,4 +1,5 @@
 ---
+permalink: /pages/about.html
 layout: mypost
 title: 关于我
 ---

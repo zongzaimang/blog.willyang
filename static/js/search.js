@@ -49,10 +49,10 @@ blog.addLoadEvent(function () {
     try {
       let data
       try {
-        if (localStorage.getItem('dbVersion') === blog.buildAt) data = localStorage.getItem('db')
+        if (localStorage.getItem('dbVersion') === blog.searchVersion) data = localStorage.getItem('db')
       } catch (e) {}
       if (!data) {
-        const response = await fetch(blog.baseurl + '/static/xml/search.xml?t=' + blog.buildAt, { signal: controller.signal })
+        const response = await fetch(blog.baseurl + '/static/xml/search.xml?t=' + blog.searchVersion, { signal: controller.signal })
         if (!response.ok) throw new Error('Search index unavailable')
         data = await response.text()
       }
@@ -60,7 +60,7 @@ blog.addLoadEvent(function () {
       const entries = Array.from(root.querySelectorAll('li'))
       if (entries.length !== rows.length) throw new Error('Search index does not match the page')
       contents = entries.map(function (entry) { return entry.textContent })
-      try { localStorage.setItem('db', data); localStorage.setItem('dbVersion', blog.buildAt) } catch (e) {}
+      try { localStorage.setItem('db', data); localStorage.setItem('dbVersion', blog.searchVersion) } catch (e) {}
       state = 'ready'
     } catch (e) {
       state = 'error'

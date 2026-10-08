@@ -1,4 +1,5 @@
 ---
+permalink: /pages/links.html
 layout: mypost
 title: 友情链接
 ---

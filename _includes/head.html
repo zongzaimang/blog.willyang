@@ -1,6 +1,6 @@
 {%- assign buildAt = site.time | date: "%Y%m%d%H%M%S" -%}
 <head>
-  <title>{{ page.title }}-{{ site.title }}</title>
+  <title>{{ page.title | escape }} · {{ site.title | escape }}</title>
   <meta charset="utf-8" />
   <link rel="canonical" href="{{ site.domainUrl }}{{ site.baseurl }}{{ page.url }}" />
   <meta http-equiv="content-language" content="zh-CN" />
@@ -11,29 +11,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="applicable-device" content="pc,mobile" />
   <meta name="author" content="{{ site.author }}" />
-  {%- if page.categories %}
-  <meta name="description" content="{{ page.title }}" />
-  <meta name="keywords" content="{{ site.author }}{% for category in page.categories %},{{ category }}{% endfor %}" />
-  {% else %}
-  <meta name="description" content="{{ site.description }}" />
-  <meta name="keywords" content="{{ site.keywords }}" />
-  {% endif -%}
+  {%- assign description = page.description | default: page.excerpt | strip_html | normalize_whitespace | truncate: 160 -%}
+  {%- if description == empty -%}{%- assign description = site.description -%}{%- endif %}
+  <meta name="description" content="{{ description | escape }}" />
+  <meta property="og:title" content="{{ page.title | escape }}" />
+  <meta property="og:description" content="{{ description | escape }}" />
+  <meta property="og:url" content="{{ site.domainUrl }}{{ site.baseurl }}{{ page.url }}" />
+  <meta property="og:site_name" content="{{ site.title | escape }}" />
+  <meta property="og:locale" content="zh_CN" />
+  <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}" />
+  <meta property="og:image" content="{{ site.domainUrl }}{{ site.baseurl }}/static/img/wy-logo-512.png" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ site.baseurl }}/static/xml/rss.xml" />
   <link rel="icon" type="image/svg+xml" href="{{site.baseurl}}/static/img/wy-logo.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/static/img/wy-logo-32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="{{site.baseurl}}/static/img/wy-logo-180.png" />
-  <link rel="stylesheet" href="{{site.baseurl}}/static/css/common.css?t={{buildAt}}" />
-  <link rel="stylesheet" href="{{site.baseurl}}/static/css/theme-dark.css?t={{buildAt}}" />
+  <link rel="stylesheet" href="{{site.baseurl}}/static/css/common.css?v={{ '/static/css/common.css' | asset_version }}" />
+  <link rel="stylesheet" href="{{site.baseurl}}/static/css/theme-dark.css?v={{ '/static/css/theme-dark.css' | asset_version }}" />
   {%- if page.layout == "mypost" %}
-  <link rel="stylesheet" href="{{site.baseurl}}/static/css/code-dark.css?t={{buildAt}}" />
-  <link rel="stylesheet" href="{{site.baseurl}}/static/css/code-light.css?t={{buildAt}}" />
-  <link rel="stylesheet" href="{{site.baseurl}}/static/css/post.css?t={{buildAt}}" />
+  <link rel="stylesheet" href="{{site.baseurl}}/static/css/code-dark.css?v={{ '/static/css/code-dark.css' | asset_version }}" />
+  <link rel="stylesheet" href="{{site.baseurl}}/static/css/code-light.css?v={{ '/static/css/code-light.css' | asset_version }}" />
+  <link rel="stylesheet" href="{{site.baseurl}}/static/css/post.css?v={{ '/static/css/post.css' | asset_version }}" />
   {%- endif %} {%- if page.layout == "page" %}
-  <link rel="stylesheet" href="{{site.baseurl}}/static/css/page.css?t={{buildAt}}" />
+  <link rel="stylesheet" href="{{site.baseurl}}/static/css/page.css?v={{ '/static/css/page.css' | asset_version }}" />
   {%- endif %}
   <script>
     window.blog = {
       baseurl: '{{site.baseurl}}',
       buildAt: '{{buildAt}}',
+      searchVersion: '{{ site.search_version }}',
       theme: 'system',
       applyTheme: function () {
         this.darkMode = this.theme === 'dark' || (this.theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)

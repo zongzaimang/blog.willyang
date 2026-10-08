@@ -9,8 +9,6 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
@@ -32,8 +30,17 @@ jobs:
       - name: Test post filename compatibility
         run: bundle exec ruby _tests/short_post_urls_test.rb
 
+      - name: Test cache invalidation
+        run: bundle exec ruby _tests/asset_versions_test.rb
+
+      - name: Test image rendering
+        run: bundle exec ruby _tests/reading_images_test.rb
+
       - name: Build Jekyll site
         run: bundle exec jekyll build --destination _site
+
+      - name: Validate published pages, resources and feeds
+        run: bundle exec ruby _tests/published_site_test.rb _site
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
@@ -43,6 +50,9 @@ jobs:
   deploy:
     if: github.event_name != 'pull_request'
     needs: build
+    permissions:
+      pages: write
+      id-token: write
     runs-on: ubuntu-latest
     environment:
       name: github-pages

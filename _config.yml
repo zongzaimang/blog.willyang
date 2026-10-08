@@ -17,14 +17,38 @@ kramdown:
   auto_ids: true
   input: GFM
   syntax_highlighter: rouge
-exclude: ['CNAME', 'README.md', 'LICENSE', '_site', 'dist', 'vendor', 'Gemfile', 'Gemfile.lock', 'blog.sh']
+exclude:
+  - CNAME
+  - README.md
+  - LICENSE
+  - _site
+  - dist
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - blog.sh
+  - tools
+  - service-worker.js
+  - 'Pasted image 20260917104537.png'
+  - static/font
+  - static/img/logo.png
+  - static/img/logo.jpg
+  - static/img/favicon.ico
+  - static/img/icon-theme-light.svg
+  - static/img/icon-theme-dark.svg
+  - static/img/icon-loading.svg
+  - static/img/icon-arrow-top.svg
+  - static/img/jetbrains.svg
+  - static/img/wy-angular-v3.png
+  - static/img/wy-monogram-v1.png
+  - static/img/wy-separated-v2.png
 
 # 域名配置
 # baseurl配置,如果网站部署在根目录下的其他目录中，请设置为 /目录名
 domainUrl: 'https://blog.willyang.space'
 baseurl: ''
 
-# 吐个槽地址，会在chat页面中重定向到该地址
+# 留言板链接，在新标签页打开
 tucaoUrl: https://support.qq.com/product/669023
 
 # 菜单
@@ -44,8 +68,6 @@ menu:
   - title: 关于
     url: /pages/about.html
 
-# 点击页面文字冒出特效,不需要请设置为false
-extClickEffect: false
 
 # Google Adsense,不需要请设置为false
 # _includes/ext-adsense.html 里面修改为自己的配置
